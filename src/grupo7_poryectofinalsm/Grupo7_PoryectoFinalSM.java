@@ -12,7 +12,7 @@ public class Grupo7_PoryectoFinalSM {
      */
     public static void main(String[] args) {
         System.out.println("HOLA SOY TASHA ");
-        System.out.println("FUNCIONA?");
+        System.out.println("¿FUNCIONA?");
                 
         // TODO code application logic here
     }
