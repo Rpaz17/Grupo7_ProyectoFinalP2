@@ -16,6 +16,7 @@ public class Grupo7_PoryectoFinalSM {
         System.out.println("Ayudaaaa");
         System.out.println("HOLA SOY TASHA ");
         System.out.println("¿FUNCIONA?");
+        System.out.println("adios");
                 
         // TODO code application logic here
     }
