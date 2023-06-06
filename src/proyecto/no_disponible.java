@@ -88,12 +88,13 @@ public class no_disponible extends javax.swing.JFrame {
     
     
     public class ImagenFondo_No extends JPanel {
-        public void paint(Graphics g) {
-            ImageIcon no_dosponible = new ImageIcon(getClass().getResource("/Programacion1/proyecto/imagen_STRATEGO/fondo_opcionNoDisponible.png"));
-            g.drawImage(no_dosponible .getImage(), 0, 0, getWidth(), getHeight(), this);
-            setOpaque(false);
-            super.paint(g);
-        }
+         public void paint(Graphics g) {
+        ImageIcon no_disponible = new ImageIcon("src/proyecto/imagen_STRATEGO/fondo_opcionNoDisponible.png");
+        g.drawImage(no_disponible.getImage(), 0, 0, getWidth(), getHeight(), this);
+        setOpaque(false);
+        super.paint(g);
     }
+}
+
     
 }
