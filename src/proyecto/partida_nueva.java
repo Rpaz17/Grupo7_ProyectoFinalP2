@@ -32,37 +32,37 @@ public class partida_nueva extends javax.swing.JFrame {
 
         panel_partida = new ImagenFondo();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/imagen_STRATEGO/btn_partidaNueva.png"))); // NOI18N
         jButton1.setBorder(null);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/imagen_STRATEGO/btn_menuPrincipal.png"))); // NOI18N
-        jButton2.setBorder(null);
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/imagen_STRATEGO/btn_menuPrincipal.png"))); // NOI18N
 
         javax.swing.GroupLayout panel_partidaLayout = new javax.swing.GroupLayout(panel_partida);
         panel_partida.setLayout(panel_partidaLayout);
         panel_partidaLayout.setHorizontalGroup(
             panel_partidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_partidaLayout.createSequentialGroup()
-                .addContainerGap(100, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(97, 97, 97))
             .addGroup(panel_partidaLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jButton2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(panel_partidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_partidaLayout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(jButton1))
+                    .addGroup(panel_partidaLayout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(jButton3)))
+                .addContainerGap(90, Short.MAX_VALUE))
         );
         panel_partidaLayout.setVerticalGroup(
             panel_partidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_partidaLayout.createSequentialGroup()
-                .addContainerGap(205, Short.MAX_VALUE)
+                .addGap(156, 156, 156)
                 .addComponent(jButton1)
-                .addGap(205, 205, 205)
-                .addComponent(jButton2)
-                .addGap(22, 22, 22))
+                .addGap(72, 72, 72)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(408, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -73,7 +73,9 @@ public class partida_nueva extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel_partida, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(panel_partida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -116,7 +118,7 @@ public class partida_nueva extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JPanel panel_partida;
     // End of variables declaration//GEN-END:variables
     public class ImagenFondo extends JPanel {
