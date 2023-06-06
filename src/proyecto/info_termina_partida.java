@@ -2,19 +2,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package proyecto.imagen_STRATEGO;
-
+package proyecto;
+import java.awt.Graphics;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.ImageIcon;
 /**
  *
  * @author pcast
  */
-public class oponente extends javax.swing.JFrame {
+public class info_termina_partida extends javax.swing.JFrame {
 
     /**
-     * Creates new form oponente
+     * Creates new form info_termina_partida
      */
-    public oponente() {
+    public info_termina_partida() {
         initComponents();
+        this.setContentPane(new ImagenFondo_FinPartida());
     }
 
     /**
@@ -59,24 +63,33 @@ public class oponente extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(oponente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(info_termina_partida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(oponente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(info_termina_partida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(oponente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(info_termina_partida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(oponente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(info_termina_partida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new oponente().setVisible(true);
+                new info_termina_partida().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
+    public class ImagenFondo_FinPartida extends JPanel {
+         public void paint(Graphics g) {
+        ImageIcon fin_partida = new ImageIcon("src/proyecto/imagen_STRATEGO/fondo_infoTerminaPartida.png");
+        g.drawImage(fin_partida.getImage(), 0, 0, getWidth(), getHeight(), this);
+        setOpaque(false);
+        super.paint(g);
+    }
+}
+
 }
