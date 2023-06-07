@@ -39,7 +39,14 @@ public class partida_nueva extends javax.swing.JFrame {
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/imagen_STRATEGO/btn_partidaNueva.png"))); // NOI18N
         jButton1.setBorder(null);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/imagen_STRATEGO/btn_menuPrincipal.png"))); // NOI18N
+        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/btn_regreso/btn_menuPrincipal.png"))); // NOI18N
+        jButton3.setText("<-");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panel_partidaLayout = new javax.swing.GroupLayout(panel_partida);
         panel_partida.setLayout(panel_partidaLayout);
@@ -60,8 +67,8 @@ public class partida_nueva extends javax.swing.JFrame {
             .addGroup(panel_partidaLayout.createSequentialGroup()
                 .addGap(156, 156, 156)
                 .addComponent(jButton1)
-                .addGap(72, 72, 72)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(176, 176, 176)
+                .addComponent(jButton3)
                 .addContainerGap(408, Short.MAX_VALUE))
         );
 
@@ -80,6 +87,10 @@ public class partida_nueva extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
