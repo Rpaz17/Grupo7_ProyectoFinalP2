@@ -40,6 +40,7 @@ public class partida_nueva extends javax.swing.JFrame {
         jButton1.setBorder(null);
 
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/btn_regreso/btn_menuPrincipal.png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -66,8 +67,8 @@ public class partida_nueva extends javax.swing.JFrame {
                 .addGap(156, 156, 156)
                 .addComponent(jButton1)
                 .addGap(176, 176, 176)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(385, Short.MAX_VALUE))
+                .addComponent(jButton3)
+                .addContainerGap(347, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
