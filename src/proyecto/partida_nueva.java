@@ -1,6 +1,7 @@
 
 package proyecto;
 import java.awt.Graphics;
+import java.net.URL;
 import javax.swing.JPanel;
 import javax.swing.ImageIcon;
 
@@ -125,9 +126,11 @@ public class partida_nueva extends javax.swing.JFrame {
     private javax.swing.JPanel panel_partida;
     // End of variables declaration//GEN-END:variables
     public class ImagenFondo extends JPanel {
+        private static String resource ="\\imagen_STRATEGO\\fondo_partidaNueva.png";
+        URL url = getClass().getResource(resource);
         @Override
         public void paint(Graphics g) {
-            ImageIcon fondo = new ImageIcon("src/proyecto/imagen_STRATEGO/fondo_partidaNueva.png");
+            ImageIcon fondo = new ImageIcon(url);  //new ImageIcon("C:\\Users\\fampa\\Documents\\NetBeansProjects\\Grupo7_PoryectoFinalSM\\src\\proyecto\\imagen_STRATEGO\\fondo_partidaNueva.png");
             g.drawImage(fondo.getImage(), 0, 0, getWidth(), getHeight(), this);
             setOpaque(false);
             super.paint(g);

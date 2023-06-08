@@ -49,7 +49,7 @@ public class Menu_Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        ImageIcon nuevaImagen = new ImageIcon("C:/Users/fampa/Documents/NetBeansProjects/Grupo7_PoryectoFinalSM/src/Imagenes_rebeca/INICIO PRINCIPAL STRATEGO.png");
+        ImageIcon nuevaImagen = new ImageIcon("C:/Users/fampa/Documents/NetBeansProjects/Grupo7_PoryectoFinalSM/src/Imagenes_rebeca/INICIO PRINCIPAL STRATEGO.png") ;
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     public class Imagen_Inicio extends JPanel {
