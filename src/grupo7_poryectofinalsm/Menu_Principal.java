@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 public class Menu_Principal extends javax.swing.JFrame {
     
     public Menu_Principal() {
-//        initComponents();
+        initComponents();
         this.setContentPane(new Imagen_Inicio());
         
     }    
