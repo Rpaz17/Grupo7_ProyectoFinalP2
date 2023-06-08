@@ -13,7 +13,7 @@ public class partida_nueva extends javax.swing.JFrame {
     public partida_nueva() {
         initComponents();
         panel_partida = new ImagenFondo();
-
+        
     }
     /**
      * This method is called from within the constructor to initialize the form.
