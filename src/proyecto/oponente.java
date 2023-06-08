@@ -12,13 +12,12 @@ import javax.swing.ImageIcon;
  * @author pcast
  */
 public class oponente extends javax.swing.JFrame {
-
     /**
      * Creates new form oponente
      */
     public oponente() {
         initComponents();
-        this.setContentPane(new ImagenFondoOponente());
+        panel_oponente=new ImagenFondoOponente();
     }
 
     /**
@@ -30,40 +29,40 @@ public class oponente extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        panel_oponente = new ImagenFondoOponente();
+        btn_regreso = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/imagen_STRATEGO/btn_regreso.png"))); // NOI18N
-        jButton1.setText("jButton1");
+        btn_regreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/btn_regreso/btn_regreso.png"))); // NOI18N
+        btn_regreso.setBorder(null);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jButton1)
-                .addContainerGap(528, Short.MAX_VALUE))
+        javax.swing.GroupLayout panel_oponenteLayout = new javax.swing.GroupLayout(panel_oponente);
+        panel_oponente.setLayout(panel_oponenteLayout);
+        panel_oponenteLayout.setHorizontalGroup(
+            panel_oponenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_oponenteLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(btn_regreso)
+                .addContainerGap(754, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(411, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(20, 20, 20))
+        panel_oponenteLayout.setVerticalGroup(
+            panel_oponenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_oponenteLayout.createSequentialGroup()
+                .addContainerGap(822, Short.MAX_VALUE)
+                .addComponent(btn_regreso)
+                .addGap(27, 27, 27))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_oponente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_oponente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -105,13 +104,14 @@ public class oponente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton btn_regreso;
+    private javax.swing.JPanel panel_oponente;
     // End of variables declaration//GEN-END:variables
     public class ImagenFondoOponente extends JPanel {
+        @Override
         public void paint(Graphics g) {
-            ImageIcon fondoOponente = new ImageIcon("src/proyecto/imagen_STRATEGO/fondo_oponente.png");
-            g.drawImage(fondoOponente.getImage(), 0, 0, getWidth(), getHeight(), this);
+            ImageIcon fondo = new ImageIcon(getClass().getResource("/proyecto/imagen_STRATEGO/fondo_oponente.png"));
+            g.drawImage(fondo.getImage(), 0, 0, getWidth(), getHeight(), this);
             setOpaque(false);
             super.paint(g);
         }

@@ -6,7 +6,6 @@ import javax.swing.JPanel;
 import javax.swing.ImageIcon;
 
 public class partida_nueva extends javax.swing.JFrame {
-
     /**
      * Creates new form partida_nueva
      */
@@ -25,19 +24,20 @@ public class partida_nueva extends javax.swing.JFrame {
     private void initComponents() {
 
         panel_partida = new ImagenFondo();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btn_partidaNueva = new javax.swing.JButton();
+        btn_menu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/imagen_STRATEGO/btn_partidaNueva.png"))); // NOI18N
-        jButton1.setBorder(null);
+        btn_partidaNueva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/imagen_STRATEGO/btn_partidaNueva.png"))); // NOI18N
+        btn_partidaNueva.setBorder(null);
 
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/btn_regreso/btn_menuPrincipal.png"))); // NOI18N
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btn_menu.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btn_menu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/btn_regreso/btn_menuPrincipal.png"))); // NOI18N
+        btn_menu.setBorder(null);
+        btn_menu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btn_menuActionPerformed(evt);
             }
         });
 
@@ -48,21 +48,21 @@ public class partida_nueva extends javax.swing.JFrame {
             .addGroup(panel_partidaLayout.createSequentialGroup()
                 .addGroup(panel_partidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_partidaLayout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(jButton1))
+                        .addGap(74, 74, 74)
+                        .addComponent(btn_partidaNueva))
                     .addGroup(panel_partidaLayout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(jButton3)))
-                .addContainerGap(90, Short.MAX_VALUE))
+                        .addGap(20, 20, 20)
+                        .addComponent(btn_menu)))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
         panel_partidaLayout.setVerticalGroup(
             panel_partidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_partidaLayout.createSequentialGroup()
                 .addGap(156, 156, 156)
-                .addComponent(jButton1)
+                .addComponent(btn_partidaNueva)
                 .addGap(176, 176, 176)
-                .addComponent(jButton3)
-                .addContainerGap(347, Short.MAX_VALUE))
+                .addComponent(btn_menu)
+                .addContainerGap(353, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -74,16 +74,16 @@ public class partida_nueva extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 6, Short.MAX_VALUE)
                 .addComponent(panel_partida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btn_menuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_menuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btn_menuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -119,16 +119,15 @@ public class partida_nueva extends javax.swing.JFrame {
             }
         });
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton btn_menu;
+    private javax.swing.JButton btn_partidaNueva;
     private javax.swing.JPanel panel_partida;
     // End of variables declaration//GEN-END:variables
     public class ImagenFondo extends JPanel {
         @Override
         public void paint(Graphics g) {
-            ImageIcon fondo = new ImageIcon(getClass().getResource("/proyecto/imagen_STRATEGO/fondo_partidaNueva.png"));  //new ImageIcon("C:\\Users\\fampa\\Documents\\NetBeansProjects\\Grupo7_PoryectoFinalSM\\src\\proyecto\\imagen_STRATEGO\\fondo_partidaNueva.png");
+            ImageIcon fondo = new ImageIcon(getClass().getResource("/proyecto/imagen_STRATEGO/fondo_partidaNueva.png"));
             g.drawImage(fondo.getImage(), 0, 0, getWidth(), getHeight(), this);
             setOpaque(false);
             super.paint(g);

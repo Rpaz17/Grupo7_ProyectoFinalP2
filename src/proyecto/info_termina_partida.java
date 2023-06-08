@@ -18,7 +18,7 @@ public class info_termina_partida extends javax.swing.JFrame {
      */
     public info_termina_partida() {
         initComponents();
-        this.setContentPane(new ImagenFondo_FinPartida());
+        panel_infoPartida=new ImagenFondo_FinPartida();
     }
 
     /**
@@ -30,17 +30,40 @@ public class info_termina_partida extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        panel_infoPartida = new ImagenFondo_FinPartida();
+        btn_menu = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        btn_menu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/btn_regreso/btn_menuPrincipal.png"))); // NOI18N
+        btn_menu.setBorder(null);
+
+        javax.swing.GroupLayout panel_infoPartidaLayout = new javax.swing.GroupLayout(panel_infoPartida);
+        panel_infoPartida.setLayout(panel_infoPartidaLayout);
+        panel_infoPartidaLayout.setHorizontalGroup(
+            panel_infoPartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_infoPartidaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btn_menu)
+                .addContainerGap(309, Short.MAX_VALUE))
+        );
+        panel_infoPartidaLayout.setVerticalGroup(
+            panel_infoPartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_infoPartidaLayout.createSequentialGroup()
+                .addContainerGap(233, Short.MAX_VALUE)
+                .addComponent(btn_menu)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(panel_infoPartida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(panel_infoPartida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -82,14 +105,17 @@ public class info_termina_partida extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_menu;
+    private javax.swing.JPanel panel_infoPartida;
     // End of variables declaration//GEN-END:variables
     public class ImagenFondo_FinPartida extends JPanel {
-         public void paint(Graphics g) {
-        ImageIcon fin_partida = new ImageIcon("src/proyecto/imagen_STRATEGO/fondo_infoTerminaPartida.png");
-        g.drawImage(fin_partida.getImage(), 0, 0, getWidth(), getHeight(), this);
-        setOpaque(false);
-        super.paint(g);
-    }
+         @Override
+        public void paint(Graphics g) {
+            ImageIcon fondo = new ImageIcon(getClass().getResource("/proyecto/imagen_STRATEGO/fondo_infoTerminaPartida.png"));
+            g.drawImage(fondo.getImage(), 0, 0, getWidth(), getHeight(), this);
+            setOpaque(false);
+            super.paint(g);
+        }
 }
 
 }
