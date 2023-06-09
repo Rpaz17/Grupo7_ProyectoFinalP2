@@ -7,11 +7,14 @@ public class Eliminar extends javax.swing.JFrame {
 
     VentaLogin ventana;
     Persona persona;
+    
     public Eliminar() {
         initComponents();
         setLocationRelativeTo(this);
         this.ventana = ventana;
         this.persona = persona;
+    user.setText(persona.getNombreUser());
+    password.setText(persona.getContrasena());
     }
 
 
@@ -24,6 +27,8 @@ public class Eliminar extends javax.swing.JFrame {
         Eliminar = new javax.swing.JButton();
         contra = new javax.swing.JPasswordField();
         volver = new javax.swing.JButton();
+        user = new javax.swing.JLabel();
+        password = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -43,22 +48,34 @@ public class Eliminar extends javax.swing.JFrame {
             }
         });
 
+        user.setText("jLabel2");
+
+        password.setText("jLabel2");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(Eliminar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(volver)
-                .addGap(33, 33, 33))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(77, 77, 77)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(contra, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 108, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(Eliminar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(volver)
+                        .addGap(33, 33, 33))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -67,7 +84,11 @@ public class Eliminar extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(contra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 135, Short.MAX_VALUE)
+                .addGap(27, 27, 27)
+                .addComponent(user)
+                .addGap(18, 18, 18)
+                .addComponent(password)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Eliminar)
                     .addComponent(volver))
@@ -94,7 +115,9 @@ public class Eliminar extends javax.swing.JFrame {
         
         if (persona.getContrasena().equals(contraeliminar )) {
                         JOptionPane.showMessageDialog(null, "Usuario eliminado existosamente");        
-            ventana.setVisible(true);
+            
+                        VentaLogin llamar= new VentaLogin();
+                        llamar.setVisible(true);
              this.dispose();
             persona.setContrasena(null);
             persona.setNombreUser(null);
@@ -106,7 +129,8 @@ public class Eliminar extends javax.swing.JFrame {
     }//GEN-LAST:event_EliminarActionPerformed
 
     private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
-             ventana.setVisible(true);
+             VentaLogin llamar= new VentaLogin();
+             llamar.setVisible(true);
              this.dispose();
     }//GEN-LAST:event_volverActionPerformed
 
@@ -116,6 +140,8 @@ public class Eliminar extends javax.swing.JFrame {
     private javax.swing.JPasswordField contra;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel password;
+    private javax.swing.JLabel user;
     private javax.swing.JButton volver;
     // End of variables declaration//GEN-END:variables
 }

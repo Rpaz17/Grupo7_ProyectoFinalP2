@@ -19,7 +19,7 @@ public class no_disponible extends javax.swing.JFrame {
      */
     public no_disponible() {
         initComponents();
-        this.setContentPane(new ImagenFondo_No());
+        panel_noDisponible = new ImagenFondo_No();
     }
 
     /**
@@ -31,17 +31,40 @@ public class no_disponible extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        panel_noDisponible = new ImagenFondo_No();
+        btn_menu = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        btn_menu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/btn_regreso/btn_menuPrincipal.png"))); // NOI18N
+        btn_menu.setBorder(null);
+
+        javax.swing.GroupLayout panel_noDisponibleLayout = new javax.swing.GroupLayout(panel_noDisponible);
+        panel_noDisponible.setLayout(panel_noDisponibleLayout);
+        panel_noDisponibleLayout.setHorizontalGroup(
+            panel_noDisponibleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_noDisponibleLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(btn_menu)
+                .addContainerGap(708, Short.MAX_VALUE))
+        );
+        panel_noDisponibleLayout.setVerticalGroup(
+            panel_noDisponibleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_noDisponibleLayout.createSequentialGroup()
+                .addContainerGap(836, Short.MAX_VALUE)
+                .addComponent(btn_menu)
+                .addGap(14, 14, 14))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(panel_noDisponible, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(panel_noDisponible, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -84,16 +107,18 @@ public class no_disponible extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_menu;
+    private javax.swing.JPanel panel_noDisponible;
     // End of variables declaration//GEN-END:variables
-    
-    
+
     public class ImagenFondo_No extends JPanel {
-         public void paint(Graphics g) {
-        ImageIcon no_disponible = new ImageIcon("src/proyecto/imagen_STRATEGO/fondo_opcionNoDisponible.png");
-        g.drawImage(no_disponible.getImage(), 0, 0, getWidth(), getHeight(), this);
-        setOpaque(false);
-        super.paint(g);
-    }
+                @Override
+        public void paint(Graphics g) {
+            ImageIcon fondo = new ImageIcon(getClass().getResource("/proyecto/imagen_STRATEGO/fondo_opcionNoDisponible.png"));
+            g.drawImage(fondo.getImage(), 0, 0, getWidth(), getHeight(), this);
+            setOpaque(false);
+            super.paint(g);
+        }
 }
 
     
