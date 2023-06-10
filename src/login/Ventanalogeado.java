@@ -158,13 +158,13 @@ public class Ventanalogeado extends javax.swing.JFrame {
         String nuevacontra=txtnuevacontra.getText();
          
          if (persona.getContrasena().equals(viejacontra )) {
-             if(nuevacontra.length()<=5 && !nuevacontra.equals(viejacontra)){
+             if(nuevacontra.length()==5 && !nuevacontra.equals(viejacontra)){
              persona.setContrasena(nuevacontra);
              ventana.setVisible(true);
              this.dispose();
              } 
              if(nuevacontra.length()>5){
-             JOptionPane.showMessageDialog(null, "Error: La contraseña debe tener 5 caracteres o menos");    
+             JOptionPane.showMessageDialog(null, "Error: La contraseña debe tener 5 caracteres");    
              }
              if(nuevacontra.equals(viejacontra)){
              JOptionPane.showMessageDialog(null, "Error: la contraseña no puede ser la misma");    
