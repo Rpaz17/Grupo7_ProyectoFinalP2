@@ -8,7 +8,7 @@ public class Ventanalogeado extends javax.swing.JFrame {
     VentaLogin ventana;
     Persona persona;
     ControladorLogin controlador;
-    
+    Eliminar delete;
 
     public Ventanalogeado(VentaLogin ventana, Persona persona) {
         initComponents();
@@ -16,7 +16,7 @@ public class Ventanalogeado extends javax.swing.JFrame {
         setLocationRelativeTo(this);
         this.ventana = ventana;
         this.persona = persona;
-        jLNombre.setText("hola mundo");  // aquí estamos cambiando el nombre del jlabel por el nombre logeado
+        jLNombre.setText("hola mundo"); 
     }
 
     @SuppressWarnings("unchecked")
@@ -179,9 +179,10 @@ public class Ventanalogeado extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarActionPerformed
-    Eliminar window= new Eliminar();
+    Eliminar window= new Eliminar( ventana,  persona);
     window.setVisible(true);
     this.dispose();
+    
     }//GEN-LAST:event_eliminarActionPerformed
 
 
