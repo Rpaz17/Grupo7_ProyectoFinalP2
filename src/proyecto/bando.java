@@ -3,10 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package proyecto;
-import java.awt.Graphics;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.ImageIcon;
+
 /**
  *
  * @author pcast
@@ -14,11 +11,11 @@ import javax.swing.ImageIcon;
 public class bando extends javax.swing.JFrame {
 
     /**
-     * Creates new form bando
+     * Creates new form configuracion
      */
     public bando() {
         initComponents();
-        panel_bando=new ImagenFondo_Bando();
+        this.setExtendedState(6);
     }
 
     /**
@@ -30,51 +27,75 @@ public class bando extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panel_bando = new ImagenFondo_Bando();
-        btn_heroes = new javax.swing.JButton();
+        jPanel7 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        btn_regresar = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
         btn_villanos = new javax.swing.JButton();
-        btn_regreso = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        jPanel1 = new javax.swing.JPanel();
+        btn_heroes = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btn_heroes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/imagen_STRATEGO/btn_heroes.png"))); // NOI18N
-        btn_heroes.setBorder(null);
-        btn_heroes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_heroesActionPerformed(evt);
+        jPanel7.setBackground(new java.awt.Color(0, 153, 153));
+
+        jPanel3.setOpaque(false);
+
+        btn_regresar.setText("REGRESAR");
+        btn_regresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_regresarMouseClicked(evt);
             }
         });
+        jPanel3.add(btn_regresar);
 
-        btn_villanos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/imagen_STRATEGO/btn_villanos.png"))); // NOI18N
-        btn_villanos.setBorder(null);
+        jPanel4.setOpaque(false);
 
-        btn_regreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/btn_regreso/btn_regreso.png"))); // NOI18N
-        btn_regreso.setBorder(null);
+        jPanel2.setOpaque(false);
 
-        javax.swing.GroupLayout panel_bandoLayout = new javax.swing.GroupLayout(panel_bando);
-        panel_bando.setLayout(panel_bandoLayout);
-        panel_bandoLayout.setHorizontalGroup(
-            panel_bandoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_bandoLayout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
-                .addComponent(btn_heroes)
-                .addGap(41, 41, 41)
-                .addComponent(btn_villanos)
-                .addGap(26, 26, 26))
-            .addGroup(panel_bandoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btn_regreso)
+        btn_villanos.setText("VILLANOS");
+        jPanel2.add(btn_villanos);
+
+        jPanel4.add(jPanel2);
+        jPanel4.add(jSeparator1);
+
+        jPanel1.setOpaque(false);
+
+        btn_heroes.setText("HEROES");
+        jPanel1.add(btn_heroes);
+
+        jPanel4.add(jPanel1);
+
+        jPanel5.setOpaque(false);
+
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("ESCOJA SU BANDO");
+        jPanel5.add(jLabel1);
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
+            .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        panel_bandoLayout.setVerticalGroup(
-            panel_bandoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_bandoLayout.createSequentialGroup()
-                .addContainerGap(322, Short.MAX_VALUE)
-                .addGroup(panel_bandoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn_villanos)
-                    .addComponent(btn_heroes))
-                .addGap(45, 45, 45)
-                .addComponent(btn_regreso)
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 306, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -82,19 +103,22 @@ public class bando extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel_bando, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel_bando, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_heroesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_heroesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_heroesActionPerformed
+    private void btn_regresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_regresarMouseClicked
+oponente ventana1 = new oponente();
+   ventana1.setVisible(true);
+        this.dispose();         // TODO add your handling code here:
+    }//GEN-LAST:event_btn_regresarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -122,6 +146,7 @@ public class bando extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(bando.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -133,17 +158,15 @@ public class bando extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_heroes;
-    private javax.swing.JButton btn_regreso;
+    private javax.swing.JButton btn_regresar;
     private javax.swing.JButton btn_villanos;
-    private javax.swing.JPanel panel_bando;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
-    public class ImagenFondo_Bando extends JPanel {
-         public void paint(Graphics g) {
-        ImageIcon fondoBando = new ImageIcon("src/proyecto/imagen_STRATEGO/fondo_bando.png");
-        g.drawImage(fondoBando.getImage(), 0, 0, getWidth(), getHeight(), this);
-        setOpaque(false);
-        super.paint(g);
-    }
-}
-
 }

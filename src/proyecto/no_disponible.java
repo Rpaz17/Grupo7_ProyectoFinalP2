@@ -3,15 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package proyecto;
-import java.awt.Graphics;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.ImageIcon;
+
 /**
  *
  * @author pcast
  */
-
 public class no_disponible extends javax.swing.JFrame {
 
     /**
@@ -19,7 +15,7 @@ public class no_disponible extends javax.swing.JFrame {
      */
     public no_disponible() {
         initComponents();
-        panel_noDisponible = new ImagenFondo_No();
+        this.setExtendedState(6);
     }
 
     /**
@@ -31,44 +27,88 @@ public class no_disponible extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panel_noDisponible = new ImagenFondo_No();
-        btn_menu = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btn_menu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/btn_regreso/btn_menuPrincipal.png"))); // NOI18N
-        btn_menu.setBorder(null);
+        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
 
-        javax.swing.GroupLayout panel_noDisponibleLayout = new javax.swing.GroupLayout(panel_noDisponible);
-        panel_noDisponible.setLayout(panel_noDisponibleLayout);
-        panel_noDisponibleLayout.setHorizontalGroup(
-            panel_noDisponibleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_noDisponibleLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(btn_menu)
-                .addContainerGap(708, Short.MAX_VALUE))
+        jPanel2.setOpaque(false);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel1.setText("NO DISPONIBLE");
+        jPanel2.add(jLabel1);
+
+        jPanel3.setOpaque(false);
+
+        jButton1.setText("MENU PRINCIPAL");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton1)
+                .addContainerGap(8, Short.MAX_VALUE))
         );
-        panel_noDisponibleLayout.setVerticalGroup(
-            panel_noDisponibleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_noDisponibleLayout.createSequentialGroup()
-                .addContainerGap(836, Short.MAX_VALUE)
-                .addComponent(btn_menu)
-                .addGap(14, 14, 14))
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(16, 16, 16))
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(217, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(199, 199, 199)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel_noDisponible, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel_noDisponible, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+menu_principal menu = new menu_principal();
+    menu.setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -102,24 +142,14 @@ public class no_disponible extends javax.swing.JFrame {
             public void run() {
                 new no_disponible().setVisible(true);
             }
-    
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_menu;
-    private javax.swing.JPanel panel_noDisponible;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
-
-    public class ImagenFondo_No extends JPanel {
-                @Override
-        public void paint(Graphics g) {
-            ImageIcon fondo = new ImageIcon(getClass().getResource("/proyecto/imagen_STRATEGO/fondo_opcionNoDisponible.png"));
-            g.drawImage(fondo.getImage(), 0, 0, getWidth(), getHeight(), this);
-            setOpaque(false);
-            super.paint(g);
-        }
-}
-
-    
 }
