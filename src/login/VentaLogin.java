@@ -1,12 +1,15 @@
 package login;
 
 import javax.swing.JOptionPane;
+import proyecto.*;
+
 
 public class VentaLogin extends javax.swing.JFrame {
     
     ControladorLogin controlador;
     Persona persona;
-
+    
+    
     public VentaLogin() {
         initComponents();
         setLocationRelativeTo(this);
@@ -141,9 +144,13 @@ public class VentaLogin extends javax.swing.JFrame {
              usuario encontrado
              */
             if (aux.getContrasena().equals(contra)) {
-                Ventanalogeado ventana = new Ventanalogeado(this, aux);
-                ventana.setVisible(true);
+
+                
+                menu_principal display = new menu_principal();
+                display.setVisible(true);
                 this.dispose();
+                
+                
                 txtUser.setText(null);
                 txtContra.setText(null);
             }else{
