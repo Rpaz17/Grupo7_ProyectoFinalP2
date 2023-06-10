@@ -134,7 +134,7 @@ public class VentanaRegistraPersona extends javax.swing.JFrame {
             String nombreUser = txtNombreUser.getText();
             String contrasena = txtContrasena.getText();
             
-            if(contrasena.length()<=5){
+            if(contrasena.length()==5){
             Persona persona = new Persona(nombreUser, contrasena);
 
             boolean repuesta = ventana.getControlador().agregarPersona(persona);
