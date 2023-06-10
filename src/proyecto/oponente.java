@@ -17,6 +17,7 @@ public class oponente extends javax.swing.JFrame {
      */
     public oponente() {
         initComponents();
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         panel_oponente=new ImagenFondoOponente();
     }
 
@@ -34,25 +35,16 @@ public class oponente extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        panel_oponente.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         btn_regreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/btn_regreso/btn_regreso.png"))); // NOI18N
         btn_regreso.setBorder(null);
-
-        javax.swing.GroupLayout panel_oponenteLayout = new javax.swing.GroupLayout(panel_oponente);
-        panel_oponente.setLayout(panel_oponenteLayout);
-        panel_oponenteLayout.setHorizontalGroup(
-            panel_oponenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_oponenteLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(btn_regreso)
-                .addContainerGap(754, Short.MAX_VALUE))
-        );
-        panel_oponenteLayout.setVerticalGroup(
-            panel_oponenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_oponenteLayout.createSequentialGroup()
-                .addContainerGap(822, Short.MAX_VALUE)
-                .addComponent(btn_regreso)
-                .addGap(27, 27, 27))
-        );
+        btn_regreso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_regresoActionPerformed(evt);
+            }
+        });
+        panel_oponente.add(btn_regreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 389, 316));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -65,8 +57,12 @@ public class oponente extends javax.swing.JFrame {
             .addComponent(panel_oponente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        pack();
+        setBounds(0, 0, 403, 323);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_regresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_regresoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_regresoActionPerformed
 
     /**
      * @param args the command line arguments
