@@ -57,11 +57,11 @@
                           <Component id="user" min="-2" pref="37" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <Component id="Eliminar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="volver" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -104,14 +104,6 @@
         </Component>
         <Component class="javax.swing.JPasswordField" name="contra">
         </Component>
-        <Component class="javax.swing.JButton" name="volver">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Cancelar"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="volverActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JLabel" name="user">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel2"/>
@@ -121,6 +113,14 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel2"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="volver">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="volver"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="volverActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

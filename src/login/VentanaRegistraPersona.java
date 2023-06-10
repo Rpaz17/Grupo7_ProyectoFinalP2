@@ -13,7 +13,7 @@ public class VentanaRegistraPersona extends javax.swing.JFrame {
         this.ventana = ventana;
 
     }
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -125,7 +125,7 @@ public class VentanaRegistraPersona extends javax.swing.JFrame {
         En este botón loque vamos a lograr hacer es gestionar o agregar a una
         persona a una listas de personas
         */
-
+        
         if (txtNombreUser.getText().isEmpty()
             || txtContrasena.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Error: Algunos de los campos se encuentran vacios");
@@ -134,7 +134,7 @@ public class VentanaRegistraPersona extends javax.swing.JFrame {
             String nombreUser = txtNombreUser.getText();
             String contrasena = txtContrasena.getText();
             
-            if(contrasena.length()<=5){
+            if(contrasena.length()==5){
             Persona persona = new Persona(nombreUser, contrasena);
 
             boolean repuesta = ventana.getControlador().agregarPersona(persona);

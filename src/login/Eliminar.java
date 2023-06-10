@@ -7,12 +7,14 @@ public class Eliminar extends javax.swing.JFrame {
 
     VentaLogin ventana;
     Persona persona;
+    ControladorLogin controlador;
     
-    public Eliminar() {
+    public Eliminar(VentaLogin ventana, Persona persona) {
         initComponents();
         setLocationRelativeTo(this);
         this.ventana = ventana;
         this.persona = persona;
+        
     user.setText(persona.getNombreUser());
     password.setText(persona.getContrasena());
     }
@@ -26,9 +28,9 @@ public class Eliminar extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         Eliminar = new javax.swing.JButton();
         contra = new javax.swing.JPasswordField();
-        volver = new javax.swing.JButton();
         user = new javax.swing.JLabel();
         password = new javax.swing.JLabel();
+        volver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -41,16 +43,16 @@ public class Eliminar extends javax.swing.JFrame {
             }
         });
 
-        volver.setText("Cancelar");
+        user.setText("jLabel2");
+
+        password.setText("jLabel2");
+
+        volver.setText("volver");
         volver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 volverActionPerformed(evt);
             }
         });
-
-        user.setText("jLabel2");
-
-        password.setText("jLabel2");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -75,7 +77,7 @@ public class Eliminar extends javax.swing.JFrame {
                         .addComponent(Eliminar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(volver)
-                        .addGap(33, 33, 33))))
+                        .addGap(46, 46, 46))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -114,13 +116,12 @@ public class Eliminar extends javax.swing.JFrame {
         String contraeliminar=contra.getText();
         
         if (persona.getContrasena().equals(contraeliminar )) {
-                        JOptionPane.showMessageDialog(null, "Usuario eliminado existosamente");        
-            
-                        VentaLogin llamar= new VentaLogin();
-                        llamar.setVisible(true);
-             this.dispose();
-            persona.setContrasena(null);
-            persona.setNombreUser(null);
+            JOptionPane.showMessageDialog(null, "Usuario eliminado existosamente");
+            persona.setContrasena("");
+            persona.setNombreUser(" ");             
+        ventana.setVisible(true);
+        this.dispose();
+        
         }else{
         JOptionPane.showMessageDialog(null, "Error: contraseña incorrecta");    
 
@@ -129,9 +130,9 @@ public class Eliminar extends javax.swing.JFrame {
     }//GEN-LAST:event_EliminarActionPerformed
 
     private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
-             VentaLogin llamar= new VentaLogin();
-             llamar.setVisible(true);
-             this.dispose();
+        // TODO add your handling code here:
+        ventana.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_volverActionPerformed
 
 

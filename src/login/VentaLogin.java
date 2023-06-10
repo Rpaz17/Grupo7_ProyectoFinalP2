@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
 public class VentaLogin extends javax.swing.JFrame {
     
     ControladorLogin controlador;
+    Persona persona;
 
     public VentaLogin() {
         initComponents();
