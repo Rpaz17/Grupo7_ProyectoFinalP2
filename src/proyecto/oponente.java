@@ -3,6 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package proyecto;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import login.ControladorLogin;
+import login.Persona;
+
+
 
 /**
  *
@@ -16,8 +23,25 @@ public class oponente extends javax.swing.JFrame {
     public oponente() {
         initComponents();
         this.setExtendedState(6);
+        inicializarComboBox();
+
+    }
+    private void inicializarComboBox() {
+    ControladorLogin controlador = new ControladorLogin();
+    Persona[] arregloPersonas = controlador.getArregloPersonas();
+    String[] array = new String[arregloPersonas.length];
+
+    for (int i = 0; i < arregloPersonas.length; i++) {
+        if (arregloPersonas[i] != null) {
+            array[i] = arregloPersonas[i].getNombreUser();
+        } else {
+            array[i] = "Persona nula";
+        }
     }
 
+    DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(array);
+    comboBox_oponente.setModel(comboBoxModel);
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -36,6 +60,7 @@ public class oponente extends javax.swing.JFrame {
         btn_continuar = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         comboBox_oponente = new javax.swing.JComboBox<>();
+        jPanel6 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -78,19 +103,22 @@ public class oponente extends javax.swing.JFrame {
         });
         jPanel5.add(comboBox_oponente);
 
-        jLabel2.setText("jLabel2");
-        jPanel5.add(jLabel2);
+        jPanel6.setOpaque(false);
+
+        jLabel2.setForeground(new java.awt.Color(0, 153, 153));
+        jPanel6.add(jLabel2);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
@@ -99,8 +127,10 @@ public class oponente extends javax.swing.JFrame {
                 .addGap(74, 74, 74)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -121,21 +151,29 @@ public class oponente extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+ 
+ 
     private void btn_continuarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_continuarMouseClicked
-bando next = new bando();
-    next.setVisible(true);
-        this.dispose();        // TODO add your handling code here:
+    String texto = jLabel2.getText();
+    if (texto.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Debe seleccionar un oponente");
+    } else {
+        bando ventana1 = new bando();
+        ventana1.setVisible(true);
+        this.dispose();
+    }
     }//GEN-LAST:event_btn_continuarMouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-partida_nueva ventana = new partida_nueva();
+    partida_nueva ventana = new partida_nueva();
     ventana.setVisible(true);
-        this.dispose();        // TODO add your handling code here:
+    this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void comboBox_oponenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBox_oponenteActionPerformed
-        // TODO add your handling code here:
+    String label=""; 
+    label=label+comboBox_oponente.getSelectedItem().toString();
+    jLabel2.setText(label);
     }//GEN-LAST:event_comboBox_oponenteActionPerformed
 
     /**
@@ -184,5 +222,6 @@ partida_nueva ventana = new partida_nueva();
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     // End of variables declaration//GEN-END:variables
 }
