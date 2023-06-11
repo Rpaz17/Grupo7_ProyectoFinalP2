@@ -165,9 +165,10 @@ public class menu_principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void CerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CerrarSesionActionPerformed
-                //VentaLogin window = new VentaLogin();
-                ventana.setVisible(true);
-                this.dispose();
+    //daba error por este llamado repetido en el mouseClicked      
+    //VentaLogin window = new VentaLogin(ventana,persona);
+    // window.setVisible(true);
+    // this.dispose();
     }//GEN-LAST:event_CerrarSesionActionPerformed
 
     private void MiPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MiPerfilActionPerformed
@@ -177,9 +178,8 @@ public class menu_principal extends javax.swing.JFrame {
     }//GEN-LAST:event_MiPerfilActionPerformed
 
     private void CerrarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CerrarSesionMouseClicked
-      VentaLogin juego = new VentaLogin ();
-    juego.setVisible(true);
-        this.dispose();   // TODO add your handling code here:
+    ventana.setVisible(true); // Vuelve a hacer visible la ventana de inicio de sesión
+    this.dispose();
     }//GEN-LAST:event_CerrarSesionMouseClicked
 
 
@@ -198,4 +198,5 @@ public class menu_principal extends javax.swing.JFrame {
     private javax.swing.JLabel nose1;
     private javax.swing.JLabel nose2;
     // End of variables declaration//GEN-END:variables
+
 }

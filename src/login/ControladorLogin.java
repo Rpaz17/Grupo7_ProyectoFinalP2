@@ -1,6 +1,7 @@
 
 package login;
 
+import java.util.Arrays;
 import login.Persona;
 
 public class ControladorLogin {
@@ -13,7 +14,7 @@ public class ControladorLogin {
         tamaño = 0;
     }
     public Persona[] getArregloPersonas() {
-        return arregloPersonas;
+        return Arrays.copyOf(arregloPersonas, tamaño);
     }
     public Persona buscarPersona(String nombreUser) {
         for (int i = 0; i < tamaño; i++) {
