@@ -8,8 +8,7 @@ public class VentaLogin extends javax.swing.JFrame {
     
     ControladorLogin controlador;
     Persona persona;
-    
-    
+
     public VentaLogin() {
         initComponents();
         setLocationRelativeTo(this);

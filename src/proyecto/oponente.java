@@ -3,45 +3,39 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package proyecto;
+
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import login.*;
-
-/**
- *
- * @author pcast
- */
 public class oponente extends javax.swing.JFrame {
     VentaLogin ventana;
     Persona persona;
-    /**
-     * Creates new form oponente
-     */
+    ControladorLogin controladorLogin;
     public oponente(VentaLogin ventana, Persona persona) {
         initComponents();
-        this.setExtendedState(6);
-        inicializarComboBox();
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         this.ventana = ventana;
         this.persona = persona;
-
+        this.controladorLogin = ventana.getControlador();
+        inicializarComboBox();
     }
 
     private void inicializarComboBox() {
-    ControladorLogin controlador = new ControladorLogin();
-    Persona[] arregloPersonas = controlador.getArregloPersonas();
-    String[] array = new String[arregloPersonas.length];
+        Persona[] arregloPersonas = controladorLogin.getArregloPersonas();
+        String[] array = new String[arregloPersonas.length];
 
-    for (int i = 0; i < arregloPersonas.length; i++) {
-        if (arregloPersonas[i] != null) {
-            array[i] = arregloPersonas[i].getNombreUser();
-        } else {
-            array[i] = "Persona nula "+i;//cambio aqui  borrar esto despues
+        for (int i = 0; i < arregloPersonas.length; i++) {
+            if (arregloPersonas[i] != null) {
+                array[i] = arregloPersonas[i].getNombreUser();
+            } else {
+                array[i] = "Persona nula " + i;
+            }
         }
+        
+        DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(array);
+        comboBox_oponente.setModel(comboBoxModel);
     }
-    DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(array);
-    comboBox_oponente.setModel(comboBoxModel);
-}
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
