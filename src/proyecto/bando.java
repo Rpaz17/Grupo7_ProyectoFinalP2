@@ -3,10 +3,10 @@ package proyecto;
 import login.*;
 
 public class bando extends javax.swing.JFrame {
-
+    VentaLogin ventana;
     Persona persona;
     
-    public bando(Persona persona) {
+    public bando(VentaLogin ventana, Persona persona) {
         initComponents();
         this.setExtendedState(6);
         this.persona=persona;
@@ -109,7 +109,7 @@ public class bando extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_regresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_regresarMouseClicked
-    oponente ventana1 = new oponente();
+    oponente ventana1 = new oponente(ventana,persona);
    ventana1.setVisible(true);
         this.dispose();         // TODO add your handling code here:
     }//GEN-LAST:event_btn_regresarMouseClicked

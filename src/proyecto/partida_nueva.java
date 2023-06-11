@@ -1,18 +1,18 @@
 package proyecto;
 
-import login.Persona;
-import login.VentaLogin;
+import login.*;
+
 
 
 public class partida_nueva extends javax.swing.JFrame {
     VentaLogin ventana;
     Persona persona;
 
-    public partida_nueva(Persona persona) {
+    public partida_nueva(VentaLogin ventana, Persona persona) {
         initComponents();
         this.setExtendedState(6);
         this.persona=persona;
-        
+        this.ventana=ventana;
     }
 
     @SuppressWarnings("unchecked")
@@ -92,7 +92,7 @@ public class partida_nueva extends javax.swing.JFrame {
     }//GEN-LAST:event_volverMouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-    oponente ventana2 = new oponente();
+    oponente ventana2 = new oponente(ventana,persona);
     ventana2.setVisible(true);
         this.dispose();         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1MouseClicked

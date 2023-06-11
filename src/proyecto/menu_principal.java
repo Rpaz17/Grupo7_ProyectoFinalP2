@@ -55,6 +55,11 @@ public class menu_principal extends javax.swing.JFrame {
         jPanel3.setOpaque(false);
 
         CerrarSesion.setText("CERRAR SESION");
+        CerrarSesion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CerrarSesionMouseClicked(evt);
+            }
+        });
         CerrarSesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CerrarSesionActionPerformed(evt);
@@ -148,7 +153,7 @@ public class menu_principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
-    partida_nueva juego = new partida_nueva(persona);
+    partida_nueva juego = new partida_nueva(ventana,persona);
     juego.setVisible(true);
         this.dispose();       
     }//GEN-LAST:event_jButton4MouseClicked
@@ -170,6 +175,12 @@ public class menu_principal extends javax.swing.JFrame {
         nose.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_MiPerfilActionPerformed
+
+    private void CerrarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CerrarSesionMouseClicked
+      VentaLogin juego = new VentaLogin ();
+    juego.setVisible(true);
+        this.dispose();   // TODO add your handling code here:
+    }//GEN-LAST:event_CerrarSesionMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
