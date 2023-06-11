@@ -144,12 +144,10 @@ public class VentaLogin extends javax.swing.JFrame {
              usuario encontrado
              */
             if (aux.getContrasena().equals(contra)) {
-
                 
-                menu_principal display = new menu_principal();
+                menu_principal display = new menu_principal(this,aux);
                 display.setVisible(true);
                 this.dispose();
-                
                 
                 txtUser.setText(null);
                 txtContra.setText(null);

@@ -8,6 +8,7 @@ public class Eliminar extends javax.swing.JFrame {
     VentaLogin ventana;
     Persona persona;
     ControladorLogin controlador;
+    MiPerfil back;
     
     public Eliminar(VentaLogin ventana, Persona persona) {
         initComponents();
@@ -47,7 +48,7 @@ public class Eliminar extends javax.swing.JFrame {
 
         password.setText("jLabel2");
 
-        volver.setText("volver");
+        volver.setText("Volver");
         volver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 volverActionPerformed(evt);
@@ -77,7 +78,7 @@ public class Eliminar extends javax.swing.JFrame {
                         .addComponent(Eliminar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(volver)
-                        .addGap(46, 46, 46))))
+                        .addGap(74, 74, 74))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -130,8 +131,8 @@ public class Eliminar extends javax.swing.JFrame {
     }//GEN-LAST:event_EliminarActionPerformed
 
     private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
-        // TODO add your handling code here:
-        ventana.setVisible(true);
+            MiPerfil regresar=new MiPerfil(ventana,persona);
+        regresar.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_volverActionPerformed
 
