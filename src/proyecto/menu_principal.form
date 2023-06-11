@@ -118,6 +118,7 @@
                 <Property name="text" type="java.lang.String" value="CERRAR SESION"/>
               </Properties>
               <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="CerrarSesionMouseClicked"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CerrarSesionActionPerformed"/>
               </Events>
             </Component>
@@ -130,10 +131,13 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="jButton3">
+            <Component class="javax.swing.JButton" name="MiPerfil">
               <Properties>
                 <Property name="text" type="java.lang.String" value="MI PERFIL"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MiPerfilActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

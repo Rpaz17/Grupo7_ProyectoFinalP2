@@ -3,14 +3,14 @@ package login;
 
 import javax.swing.JOptionPane;
 
-public class Ventanalogeado extends javax.swing.JFrame {
+public class CambiarPassword extends javax.swing.JFrame {
 
     VentaLogin ventana;
     Persona persona;
     ControladorLogin controlador;
     Eliminar delete;
 
-    public Ventanalogeado(VentaLogin ventana, Persona persona) {
+    public CambiarPassword(VentaLogin ventana, Persona persona) {
         initComponents();
         setLocationRelativeTo(this);
         setLocationRelativeTo(this);
@@ -32,7 +32,6 @@ public class Ventanalogeado extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         txtnuevacontra = new javax.swing.JPasswordField();
         jButton2 = new javax.swing.JButton();
-        eliminar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -64,13 +63,6 @@ public class Ventanalogeado extends javax.swing.JFrame {
             }
         });
 
-        eliminar.setText("Eliminar");
-        eliminar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                eliminarActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -84,8 +76,7 @@ public class Ventanalogeado extends javax.swing.JFrame {
                         .addComponent(jLNombre)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(eliminar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 209, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton1)
                         .addGap(28, 28, 28))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -116,9 +107,7 @@ public class Ventanalogeado extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jButton2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(eliminar))
+                .addComponent(jButton1)
                 .addGap(35, 35, 35))
         );
 
@@ -137,13 +126,8 @@ public class Ventanalogeado extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-        
-        /*
-          en esta ocasión llamando a la ventana principal para volverlo visible
-          y que esta ventana donde estamos parado se esconda
-         */
-        ventana.setVisible(true);
+        MiPerfil regresar=new MiPerfil(ventana,persona);
+        regresar.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -178,16 +162,8 @@ public class Ventanalogeado extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarActionPerformed
-    Eliminar window= new Eliminar( ventana,  persona);
-    window.setVisible(true);
-    this.dispose();
-    
-    }//GEN-LAST:event_eliminarActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton eliminar;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLNombre;
