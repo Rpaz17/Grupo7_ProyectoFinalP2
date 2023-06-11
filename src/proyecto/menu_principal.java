@@ -5,18 +5,19 @@ import login.*;
 
 public class menu_principal extends javax.swing.JFrame {
     
-    VentaLogin ventana;
     Persona persona;
-    ControladorLogin controlador;
-    Eliminar delete;
-
-    public menu_principal() {
+    VentaLogin ventana;
+    
+    public menu_principal(VentaLogin ventana, Persona persona) {
         initComponents();
         this.setExtendedState(6);
         setLocationRelativeTo(this);
-        this.ventana = ventana;
+
         this.persona = persona;
-         
+        this.ventana=ventana;
+        
+        nose1.setText(persona.getNombreUser());
+        nose2.setText(persona.getContrasena());
     }
 
     @SuppressWarnings("unchecked")
@@ -29,7 +30,7 @@ public class menu_principal extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         CerrarSesion = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
+        MiPerfil = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jButton4 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
@@ -63,8 +64,13 @@ public class menu_principal extends javax.swing.JFrame {
 
         jPanel4.setOpaque(false);
 
-        jButton3.setText("MI PERFIL");
-        jPanel4.add(jButton3);
+        MiPerfil.setText("MI PERFIL");
+        MiPerfil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MiPerfilActionPerformed(evt);
+            }
+        });
+        jPanel4.add(MiPerfil);
 
         jPanel5.setOpaque(false);
 
@@ -142,28 +148,34 @@ public class menu_principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
-    partida_nueva juego = new partida_nueva();
+    partida_nueva juego = new partida_nueva(persona);
     juego.setVisible(true);
-        this.dispose();        // TODO add your handling code here:
+        this.dispose();       
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-    configuracion set=  new configuracion();
+    configuracion set=  new configuracion(persona);
     set.setVisible(true);
         this.dispose();         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void CerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CerrarSesionActionPerformed
-                VentaLogin window = new VentaLogin();
-                window.setVisible(true);
+                //VentaLogin window = new VentaLogin();
+                ventana.setVisible(true);
                 this.dispose();
     }//GEN-LAST:event_CerrarSesionActionPerformed
+
+    private void MiPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MiPerfilActionPerformed
+        MiPerfil nose=new MiPerfil(ventana,persona);
+        nose.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_MiPerfilActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton CerrarSesion;
+    private javax.swing.JButton MiPerfil;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JPanel jPanel1;

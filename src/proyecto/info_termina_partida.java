@@ -1,20 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package proyecto;
 
-/**
- *
- * @author pcast
- */
+import login.*;
+
 public class info_termina_partida extends javax.swing.JFrame {
 
-    /**
-     * Creates new form no_disponible
-     */
+    VentaLogin ventana;
+    Persona persona;
+
     public info_termina_partida() {
         initComponents();
+        this.ventana = ventana;
+        this.persona = persona;
+    
+    
     }
 
     /**
@@ -87,7 +85,7 @@ public class info_termina_partida extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_menuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_menuMouseClicked
-menu_principal menu = new menu_principal();
+    menu_principal menu = new menu_principal(ventana,persona);
     menu.setVisible(true);
         this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btn_menuMouseClicked
