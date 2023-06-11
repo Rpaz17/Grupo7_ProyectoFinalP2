@@ -87,5 +87,6 @@ public class Personaje {
           Thor_H.Nivel=5;
           HumanTorch_H.Nivel=5;
           
+          
     }       
 }
