@@ -30,7 +30,6 @@ public class TableroSwing extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         Zn38 = new javax.swing.JButton();
         Zn12 = new javax.swing.JButton();
@@ -130,18 +129,6 @@ public class TableroSwing extends javax.swing.JFrame {
         Zn23 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jPanel1.setEnabled(false);
-        jPanel1.setOpaque(false);
-        jPanel1.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                jPanel1AncestorAdded(evt);
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-        });
 
         jPanel2.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
@@ -1290,429 +1277,416 @@ public class TableroSwing extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(367, 367, 367)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(380, 380, 380))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 820, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGap(0, 804, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Zn23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn23ActionPerformed
+    private void Zn38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn38ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Zn23ActionPerformed
-
-    private void ZnProhibida5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZnProhibida5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ZnProhibida5ActionPerformed
-
-    private void Zn04ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn04ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn04ActionPerformed
-
-    private void Zn46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn46ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn46ActionPerformed
-
-    private void Zn72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn72ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn72ActionPerformed
-
-    private void ZnProhibida1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZnProhibida1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ZnProhibida1ActionPerformed
-
-    private void Zn16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn16ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn16ActionPerformed
-
-    private void Zn89ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn89ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn89ActionPerformed
-
-    private void Zn42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn42ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn42ActionPerformed
-
-    private void Zn79ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn79ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn79ActionPerformed
-
-    private void Zn62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn62ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn62ActionPerformed
-
-    private void Zn03ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn03ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn03ActionPerformed
-
-    private void Zn93ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn93ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn93ActionPerformed
-
-    private void Zn81ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn81ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn81ActionPerformed
-
-    private void Zn100ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn100ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn100ActionPerformed
-
-    private void Zn52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn52ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn52ActionPerformed
-
-    private void Zn45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn45ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn45ActionPerformed
-
-    private void Zn01ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn01ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn01ActionPerformed
-
-    private void Zn41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn41ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn41ActionPerformed
-
-    private void Zn76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn76ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn76ActionPerformed
-
-    private void Zn66ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn66ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn66ActionPerformed
-
-    private void Zn67ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn67ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn67ActionPerformed
-
-    private void Zn65ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn65ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn65ActionPerformed
-
-    private void Zn29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn29ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn29ActionPerformed
-
-    private void Zn90ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn90ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn90ActionPerformed
-
-    private void Zn15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn15ActionPerformed
-
-    private void ZnProhibida6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZnProhibida6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ZnProhibida6ActionPerformed
-
-    private void Zn74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn74ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn74ActionPerformed
-
-    private void Zn69ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn69ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn69ActionPerformed
-
-    private void Zn26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn26ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn26ActionPerformed
-
-    private void Zn87ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn87ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn87ActionPerformed
-
-    private void Zn40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn40ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn40ActionPerformed
-
-    private void Zn07ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn07ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn07ActionPerformed
-
-    private void Zn99ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn99ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn99ActionPerformed
-
-    private void Zn17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn17ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn17ActionPerformed
-
-    private void Zn84ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn84ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn84ActionPerformed
-
-    private void Zn50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn50ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn50ActionPerformed
-
-    private void Zn96ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn96ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn96ActionPerformed
-
-    private void Zn25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn25ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn25ActionPerformed
-
-    private void Zn88ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn88ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn88ActionPerformed
-
-    private void Zn63ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn63ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn63ActionPerformed
-
-    private void Zn64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn64ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn64ActionPerformed
-
-    private void Zn80ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn80ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn80ActionPerformed
-
-    private void Zn86ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn86ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn86ActionPerformed
-
-    private void Zn35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn35ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn35ActionPerformed
-
-    private void Zn24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn24ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn24ActionPerformed
-
-    private void Zn20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn20ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn20ActionPerformed
-
-    private void Zn55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn55ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn55ActionPerformed
-
-    private void Zn77ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn77ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn77ActionPerformed
-
-    private void Zn21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn21ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn21ActionPerformed
-
-    private void Zn68ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn68ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn68ActionPerformed
-
-    private void Zn94ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn94ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn94ActionPerformed
-
-    private void Zn13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn13ActionPerformed
-
-    private void Zn70ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn70ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn70ActionPerformed
-
-    private void Zn37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn37ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn37ActionPerformed
-
-    private void Zn75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn75ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn75ActionPerformed
-
-    private void Zn02ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn02ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn02ActionPerformed
-
-    private void Zn91ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn91ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn91ActionPerformed
-
-    private void Zn71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn71ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn71ActionPerformed
-
-    private void Zn85ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn85ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn85ActionPerformed
-
-    private void Zn92ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn92ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn92ActionPerformed
-
-    private void Zn30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn30ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn30ActionPerformed
-
-    private void Zn06ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn06ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn06ActionPerformed
-
-    private void Zn08ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn08ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn08ActionPerformed
-
-    private void Zn32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn32ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn32ActionPerformed
-
-    private void Zn83ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn83ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn83ActionPerformed
-
-    private void Zn05ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn05ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn05ActionPerformed
-
-    private void Zn14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn14ActionPerformed
-
-    private void Zn33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn33ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn33ActionPerformed
-
-    private void Zn22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn22ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn22ActionPerformed
-
-    private void Zn59ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn59ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn59ActionPerformed
-
-    private void Zn27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn27ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn27ActionPerformed
-
-    private void Zn60ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn60ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn60ActionPerformed
-
-    private void Zn82ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn82ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn82ActionPerformed
-
-    private void Zn51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn51ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn51ActionPerformed
-
-    private void Zn97ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn97ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn97ActionPerformed
-
-    private void Zn09ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn09ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn09ActionPerformed
-
-    private void Zn95ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn95ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn95ActionPerformed
-
-    private void Zn19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn19ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn19ActionPerformed
-
-    private void Zn18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn18ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn18ActionPerformed
-
-    private void Zn39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn39ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn39ActionPerformed
-
-    private void ZnProhibida9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZnProhibida9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ZnProhibida9ActionPerformed
-
-    private void Zn56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn56ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn56ActionPerformed
-
-    private void Zn34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn34ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn34ActionPerformed
-
-    private void Zn31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn31ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn31ActionPerformed
-
-    private void Zn73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn73ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn73ActionPerformed
-
-    private void Zn11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn11ActionPerformed
-
-    private void Zn49ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn49ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn49ActionPerformed
-
-    private void Zn98ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn98ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn98ActionPerformed
-
-    private void Zn78ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn78ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn78ActionPerformed
-
-    private void Zn28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn28ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn28ActionPerformed
-
-    private void Zn36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn36ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn36ActionPerformed
-
-    private void Zn61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn61ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn61ActionPerformed
-
-    private void Zn10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Zn10ActionPerformed
+    }//GEN-LAST:event_Zn38ActionPerformed
 
     private void Zn12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn12ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Zn12ActionPerformed
 
-    private void Zn38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn38ActionPerformed
+    private void Zn10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn10ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Zn38ActionPerformed
+    }//GEN-LAST:event_Zn10ActionPerformed
 
-    private void jPanel1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jPanel1AncestorAdded
-        ImageIcon fondo=new ImageIcon();
-    }//GEN-LAST:event_jPanel1AncestorAdded
+    private void Zn61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn61ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn61ActionPerformed
+
+    private void Zn36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn36ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn36ActionPerformed
+
+    private void Zn28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn28ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn28ActionPerformed
+
+    private void Zn78ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn78ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn78ActionPerformed
+
+    private void Zn98ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn98ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn98ActionPerformed
+
+    private void Zn49ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn49ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn49ActionPerformed
+
+    private void Zn11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn11ActionPerformed
+
+    private void Zn73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn73ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn73ActionPerformed
+
+    private void Zn31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn31ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn31ActionPerformed
+
+    private void Zn34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn34ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn34ActionPerformed
+
+    private void Zn56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn56ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn56ActionPerformed
+
+    private void ZnProhibida9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZnProhibida9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ZnProhibida9ActionPerformed
+
+    private void Zn39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn39ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn39ActionPerformed
+
+    private void Zn18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn18ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn18ActionPerformed
+
+    private void Zn19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn19ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn19ActionPerformed
+
+    private void Zn95ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn95ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn95ActionPerformed
+
+    private void Zn09ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn09ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn09ActionPerformed
+
+    private void Zn97ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn97ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn97ActionPerformed
+
+    private void Zn51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn51ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn51ActionPerformed
+
+    private void Zn82ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn82ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn82ActionPerformed
+
+    private void Zn60ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn60ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn60ActionPerformed
+
+    private void Zn27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn27ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn27ActionPerformed
+
+    private void Zn59ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn59ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn59ActionPerformed
+
+    private void Zn22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn22ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn22ActionPerformed
+
+    private void Zn33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn33ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn33ActionPerformed
+
+    private void Zn14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn14ActionPerformed
+
+    private void Zn05ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn05ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn05ActionPerformed
+
+    private void Zn83ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn83ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn83ActionPerformed
+
+    private void Zn32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn32ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn32ActionPerformed
+
+    private void Zn08ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn08ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn08ActionPerformed
+
+    private void Zn06ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn06ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn06ActionPerformed
+
+    private void Zn30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn30ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn30ActionPerformed
+
+    private void Zn92ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn92ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn92ActionPerformed
+
+    private void Zn85ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn85ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn85ActionPerformed
+
+    private void Zn71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn71ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn71ActionPerformed
+
+    private void Zn91ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn91ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn91ActionPerformed
+
+    private void Zn02ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn02ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn02ActionPerformed
+
+    private void Zn75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn75ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn75ActionPerformed
+
+    private void Zn37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn37ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn37ActionPerformed
+
+    private void Zn70ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn70ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn70ActionPerformed
+
+    private void Zn13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn13ActionPerformed
+
+    private void Zn94ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn94ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn94ActionPerformed
+
+    private void Zn68ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn68ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn68ActionPerformed
+
+    private void Zn21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn21ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn21ActionPerformed
+
+    private void Zn77ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn77ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn77ActionPerformed
+
+    private void Zn55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn55ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn55ActionPerformed
+
+    private void Zn20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn20ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn20ActionPerformed
+
+    private void Zn24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn24ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn24ActionPerformed
+
+    private void Zn35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn35ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn35ActionPerformed
+
+    private void Zn86ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn86ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn86ActionPerformed
+
+    private void Zn80ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn80ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn80ActionPerformed
+
+    private void Zn64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn64ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn64ActionPerformed
+
+    private void Zn63ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn63ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn63ActionPerformed
+
+    private void Zn88ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn88ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn88ActionPerformed
+
+    private void Zn25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn25ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn25ActionPerformed
+
+    private void Zn96ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn96ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn96ActionPerformed
+
+    private void Zn50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn50ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn50ActionPerformed
+
+    private void Zn84ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn84ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn84ActionPerformed
+
+    private void Zn17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn17ActionPerformed
+
+    private void Zn99ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn99ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn99ActionPerformed
+
+    private void Zn07ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn07ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn07ActionPerformed
+
+    private void Zn40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn40ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn40ActionPerformed
+
+    private void Zn87ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn87ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn87ActionPerformed
+
+    private void Zn26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn26ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn26ActionPerformed
+
+    private void Zn69ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn69ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn69ActionPerformed
+
+    private void Zn74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn74ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn74ActionPerformed
+
+    private void ZnProhibida6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZnProhibida6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ZnProhibida6ActionPerformed
+
+    private void Zn15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn15ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn15ActionPerformed
+
+    private void Zn90ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn90ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn90ActionPerformed
+
+    private void Zn29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn29ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn29ActionPerformed
+
+    private void Zn65ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn65ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn65ActionPerformed
+
+    private void Zn67ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn67ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn67ActionPerformed
+
+    private void Zn66ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn66ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn66ActionPerformed
+
+    private void Zn76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn76ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn76ActionPerformed
+
+    private void Zn41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn41ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn41ActionPerformed
+
+    private void Zn01ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn01ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn01ActionPerformed
+
+    private void Zn45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn45ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn45ActionPerformed
+
+    private void Zn52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn52ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn52ActionPerformed
+
+    private void Zn100ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn100ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn100ActionPerformed
+
+    private void Zn81ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn81ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn81ActionPerformed
+
+    private void Zn93ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn93ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn93ActionPerformed
+
+    private void Zn03ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn03ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn03ActionPerformed
+
+    private void Zn62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn62ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn62ActionPerformed
+
+    private void Zn79ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn79ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn79ActionPerformed
+
+    private void Zn42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn42ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn42ActionPerformed
+
+    private void Zn89ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn89ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn89ActionPerformed
+
+    private void Zn16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn16ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn16ActionPerformed
+
+    private void ZnProhibida1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZnProhibida1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ZnProhibida1ActionPerformed
+
+    private void Zn72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn72ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn72ActionPerformed
+
+    private void Zn46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn46ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn46ActionPerformed
+
+    private void Zn04ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn04ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn04ActionPerformed
+
+    private void ZnProhibida5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZnProhibida5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ZnProhibida5ActionPerformed
+
+    private void Zn23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn23ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn23ActionPerformed
 
     private void jPanel2AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jPanel2AncestorAdded
-      ImageIcon tablero=new ImageIcon("/Imagenes_rebeca/tablero_fin.png");
+        ImageIcon tablero=new ImageIcon("/Imagenes_rebeca/tablero_fin.png");
     }//GEN-LAST:event_jPanel2AncestorAdded
 
     /**
@@ -1847,7 +1821,6 @@ public class TableroSwing extends javax.swing.JFrame {
     private javax.swing.JButton ZnProhibida5;
     private javax.swing.JButton ZnProhibida6;
     private javax.swing.JButton ZnProhibida9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
