@@ -160,7 +160,7 @@ public class menu_principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void CerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CerrarSesionActionPerformed
-                VentaLogin window = new VentaLogin();
+                //VentaLogin window = new VentaLogin();
                 ventana.setVisible(true);
                 this.dispose();
     }//GEN-LAST:event_CerrarSesionActionPerformed

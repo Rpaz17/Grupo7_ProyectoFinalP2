@@ -12,6 +12,9 @@ public class ControladorLogin {
         arregloPersonas = new Persona[10]; // Tamaño inicial del arreglo
         tamaño = 0;
     }
+    public Persona[] getArregloPersonas() {
+        return arregloPersonas;
+    }
     public Persona buscarPersona(String nombreUser) {
         for (int i = 0; i < tamaño; i++) {
             Persona persona = arregloPersonas[i];
