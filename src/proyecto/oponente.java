@@ -38,7 +38,6 @@ public class oponente extends javax.swing.JFrame {
             array[i] = "Persona nula";
         }
     }
-
     DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(array);
     comboBox_oponente.setModel(comboBoxModel);
 }
@@ -151,8 +150,7 @@ public class oponente extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
- 
- 
+
     private void btn_continuarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_continuarMouseClicked
     String texto = jLabel2.getText();
     if (texto.isEmpty()) {
