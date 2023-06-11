@@ -1,5 +1,8 @@
 package grupo7_poryectofinalsm;
 public class Personaje {
+    String Tipo;
+    int Nivel;
+    public Personaje(){
           Personaje MrFantastic_H = new Personaje();
           Personaje CaptainAmerica_H = new Personaje();
           Personaje ProfessorX_H = new Personaje();
@@ -26,5 +29,63 @@ public class Personaje {
           Personaje Colossus_H = new Personaje();
           Personaje Gambit_H = new Personaje();
           Personaje SpiderGirl_H = new Personaje();
+          Personaje IceMan_H = new Personaje();
+          Personaje Storm_H = new Personaje();
+          Personaje Phoenix_H = new Personaje();
+          Personaje DrStrange_H = new Personaje();
+          Personaje Elektra_H = new Personaje();
+          Personaje Nightcrawler_H = new Personaje();
+          Personaje BlackWidow_H = new Personaje();
+          Personaje NovaBlast_BH = new Personaje();
+          Personaje PlanetEarth_H = new Personaje();
+          MrFantastic_H.Tipo="Heroe";
+          CaptainAmerica_H.Tipo="Heroe";
+          ProfessorX_H.Tipo="Heroe";
+          NickFurry_H.Tipo="Heroe";
+          SpiderMan_H.Tipo="Heroe";
+          Wolverine_H.Tipo="Heroe";
+          Namor_H.Tipo="Heroe";
+          Daredevil_H.Tipo="Heroe";
+          SilverSurfer_H.Tipo="Heroe";
+          Hulk_H.Tipo="Heroe";
+          IronMan_H.Tipo="Heroe";
+          Thor_H.Tipo="Heroe";
+          HumanTorch_H.Tipo="Heroe";
+          Cyclops_H.Tipo="Heroe";
+          InvisibleWoman_H.Tipo="Heroe";
+          GhostRider_H.Tipo="Heroe";
+          Punisher_H.Tipo="Heroe";
+          Blade_H.Tipo="Heroe";
+          Thing_H.Tipo="Heroe";
+          EmmaFrost_H.Tipo="Heroe";
+          SheHulk_H.Tipo="Heroe";
+          GiantMan_H.Tipo="Heroe";
+          Beast_H.Tipo="Heroe";
+          Colossus_H.Tipo="Heroe";
+          Gambit_H.Tipo="Heroe";
+          SpiderGirl_H.Tipo="Heroe";
+          IceMan_H.Tipo="Heroe";
+          Storm_H.Tipo="Heroe";
+          Phoenix_H.Tipo="Heroe";
+          DrStrange_H.Tipo="Heroe";
+          Elektra_H.Tipo="Heroe";
+          Nightcrawler_H.Tipo="Heroe";
+          BlackWidow_H.Tipo="Heroe";
+          NovaBlast_BH.Tipo="Heroe";
+          PlanetEarth_H.Tipo="Heroe";
+          MrFantastic_H.Nivel=10;
+          CaptainAmerica_H.Nivel=9;
+          ProfessorX_H.Nivel=8;
+          NickFurry_H.Nivel=8;
+          SpiderMan_H.Nivel=7;
+          Wolverine_H.Nivel=7;
+          Namor_H.Nivel=7;
+          Daredevil_H.Nivel=6;
+          SilverSurfer_H.Nivel=6;
+          Hulk_H.Nivel=6;
+          IronMan_H.Nivel=6;
+          Thor_H.Nivel=5;
+          HumanTorch_H.Nivel=5;
           
+    }       
 }
