@@ -112,7 +112,7 @@ public class bando extends javax.swing.JFrame {
 
     private void btn_regresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_regresarMouseClicked
     oponente ventana1=new oponente(ventana,persona);
-        ventana1.setVisible(true);
+     ventana1.setVisible(true);
     this.dispose();
     }//GEN-LAST:event_btn_regresarMouseClicked
 
