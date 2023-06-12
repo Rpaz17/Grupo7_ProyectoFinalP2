@@ -153,7 +153,7 @@ public class oponente extends javax.swing.JFrame {
             if (confirmacion == JOptionPane.YES_OPTION) {
                 bando ventana1 = new bando(ventana,persona);
                 ventana1.setVisible(true);
-                this.dispose();
+                this.setVisible(false);
             }
         }
     }//GEN-LAST:event_btn_continuarMouseClicked
@@ -161,7 +161,7 @@ public class oponente extends javax.swing.JFrame {
     private void btn_regresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_regresarMouseClicked
     partida_nueva menu = new partida_nueva(ventana,persona);
     menu.setVisible(true);
-    this.dispose();          // TODO add your handling code here:
+    this.setVisible(false);          // TODO add your handling code here:
     }//GEN-LAST:event_btn_regresarMouseClicked
 
     private void comboBox_oponenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBox_oponenteActionPerformed

@@ -155,13 +155,13 @@ public class menu_principal extends javax.swing.JFrame {
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
     partida_nueva juego = new partida_nueva(ventana,persona);
     juego.setVisible(true);
-        this.dispose();       
+    this.setVisible(false);       
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
     configuracion set=  new configuracion(persona);
     set.setVisible(true);
-        this.dispose();         // TODO add your handling code here:
+    this.setVisible(false);
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void CerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CerrarSesionActionPerformed
@@ -174,12 +174,12 @@ public class menu_principal extends javax.swing.JFrame {
     private void MiPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MiPerfilActionPerformed
         MiPerfil nose=new MiPerfil(ventana,persona);
         nose.setVisible(true);
-        this.dispose();
+        this.setVisible(false);
     }//GEN-LAST:event_MiPerfilActionPerformed
 
     private void CerrarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CerrarSesionMouseClicked
     ventana.setVisible(true); // Vuelve a hacer visible la ventana de inicio de sesión
-    this.dispose();
+    this.setVisible(false);
     }//GEN-LAST:event_CerrarSesionMouseClicked
 
 

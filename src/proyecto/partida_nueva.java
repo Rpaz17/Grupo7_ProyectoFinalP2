@@ -87,14 +87,14 @@ public class partida_nueva extends javax.swing.JFrame {
     private void volverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseClicked
     menu_principal menu = new menu_principal(ventana,persona);
     menu.setVisible(true);
-    this.dispose();       
+    this.setVisible(false);     
         
     }//GEN-LAST:event_volverMouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
     oponente ventana2 = new oponente(ventana,persona);
     ventana2.setVisible(true);
-        this.dispose();         // TODO add your handling code here:
+    this.setVisible(false);
     }//GEN-LAST:event_jButton1MouseClicked
 
 

@@ -87,7 +87,7 @@ public class info_termina_partida extends javax.swing.JFrame {
     private void btn_menuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_menuMouseClicked
     menu_principal menu = new menu_principal(ventana,persona);
     menu.setVisible(true);
-        this.dispose();        // TODO add your handling code here:
+    this.setVisible(false);
     }//GEN-LAST:event_btn_menuMouseClicked
 
     /**
