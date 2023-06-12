@@ -2,7 +2,7 @@ package grupo7_poryectofinalsm;
 
 import javax.swing.ImageIcon;
 public class TableroSwing extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form TableroSwing
      */
@@ -760,9 +760,19 @@ public class TableroSwing extends javax.swing.JFrame {
         });
 
         Zn01.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        Zn01.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Zn01MouseClicked(evt);
+            }
+        });
         Zn01.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Zn01ActionPerformed(evt);
+            }
+        });
+        Zn01.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                Zn01PropertyChange(evt);
             }
         });
 
@@ -1292,6 +1302,7 @@ public class TableroSwing extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+   
     private void Zn38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Zn38ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Zn38ActionPerformed
@@ -1679,6 +1690,14 @@ public class TableroSwing extends javax.swing.JFrame {
     private void jPanel2AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jPanel2AncestorAdded
         ImageIcon tablero=new ImageIcon("/Imagenes_rebeca/tablero_fin.png");
     }//GEN-LAST:event_jPanel2AncestorAdded
+
+    private void Zn01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Zn01MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn01MouseClicked
+
+    private void Zn01PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_Zn01PropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Zn01PropertyChange
 
     /**
      * @param args the command line arguments
