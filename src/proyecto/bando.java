@@ -1,7 +1,7 @@
 package proyecto;
-
-import login.*;
 import grupo7_poryectofinalsm.*;
+import login.*;
+
 public class bando extends javax.swing.JFrame {
      TableroStratego tablero;
     VentaLogin ventana;
