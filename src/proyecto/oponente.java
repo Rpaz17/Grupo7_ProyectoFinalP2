@@ -9,6 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import login.*;
 import java.util.stream.Collectors;
+//tiene que funcionar
 public class oponente extends javax.swing.JFrame {
     VentaLogin ventana;
     Persona persona;
