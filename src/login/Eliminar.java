@@ -121,7 +121,7 @@ public class Eliminar extends javax.swing.JFrame {
             persona.setContrasena("");
             persona.setNombreUser(" ");             
         ventana.setVisible(true);
-        this.dispose();
+        this.setVisible(false);
         
         }else{
         JOptionPane.showMessageDialog(null, "Error: contraseña incorrecta");    
@@ -133,7 +133,7 @@ public class Eliminar extends javax.swing.JFrame {
     private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
             MiPerfil regresar=new MiPerfil(ventana,persona);
         regresar.setVisible(true);
-        this.dispose();
+        this.setVisible(false);
     }//GEN-LAST:event_volverActionPerformed
 
 
