@@ -3,11 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package proyecto;
-
+import java.util.Arrays;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import login.*;
+import java.util.stream.Collectors;
+//tiene que funcionar
 public class oponente extends javax.swing.JFrame {
     VentaLogin ventana;
     Persona persona;
@@ -21,21 +23,19 @@ public class oponente extends javax.swing.JFrame {
         inicializarComboBox();
     }
 
-    private void inicializarComboBox() {
-        Persona[] arregloPersonas = controladorLogin.getArregloPersonas();
-        String[] array = new String[arregloPersonas.length];
+    private void inicializarComboBox() {      
+        Persona[] arregloPersonas = controladorLogin.getArregloPersonas();//arreglo qeu contiene todos registrados
+        String usuario = persona.getNombreUser();//obtener loqueado
 
-        for (int i = 0; i < arregloPersonas.length; i++) {
-            if (arregloPersonas[i] != null) {
-                array[i] = arregloPersonas[i].getNombreUser();
-            } else {
-                array[i] = "Persona nula " + i;
-            }
-        }
-        
-        DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(array);
-        comboBox_oponente.setModel(comboBoxModel);
+        String[] colador = Arrays.stream(arregloPersonas)//metodo que hace este array en flujos
+                             .filter(p -> p != null && !p.getNombreUser().equals(usuario))//aqui cuela y pasa todo menos usaurio logueado
+                             .map(Persona::getNombreUser)//obtiene el sobrante
+                             .toArray(String[]::new);//nuevos elemntos en array 
+
+        DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(colador);
+        comboBox_oponente.setModel(comboBoxModel);//actualizamos el modelo
     }
+
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -195,6 +195,9 @@ public class oponente extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(oponente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+
         //</editor-fold>
         //</editor-fold>
 
