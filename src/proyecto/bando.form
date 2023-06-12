@@ -102,6 +102,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="VILLANOS"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_villanosMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -118,6 +121,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="HEROES"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_heroesMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>

@@ -1,8 +1,9 @@
 package proyecto;
 
 import login.*;
-
+import grupo7_poryectofinalsm.*;
 public class bando extends javax.swing.JFrame {
+     TableroStratego tablero;
     VentaLogin ventana;
     Persona persona;
 
@@ -54,6 +55,11 @@ public class bando extends javax.swing.JFrame {
         jPanel2.setOpaque(false);
 
         btn_villanos.setText("VILLANOS");
+        btn_villanos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_villanosMouseClicked(evt);
+            }
+        });
         jPanel2.add(btn_villanos);
 
         jPanel4.add(jPanel2);
@@ -62,6 +68,11 @@ public class bando extends javax.swing.JFrame {
         jPanel1.setOpaque(false);
 
         btn_heroes.setText("HEROES");
+        btn_heroes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_heroesMouseClicked(evt);
+            }
+        });
         jPanel1.add(btn_heroes);
 
         jPanel4.add(jPanel1);
@@ -115,6 +126,18 @@ public class bando extends javax.swing.JFrame {
      ventana1.setVisible(true);
     this.setVisible(false);
     }//GEN-LAST:event_btn_regresarMouseClicked
+
+    private void btn_villanosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_villanosMouseClicked
+        TableroStratego tablero=new TableroStratego();
+        tablero.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btn_villanosMouseClicked
+
+    private void btn_heroesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_heroesMouseClicked
+        TableroStratego tablero=new TableroStratego();
+        tablero.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btn_heroesMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_heroes;
