@@ -14,6 +14,8 @@ public class TableroStratego extends JFrame {
      private Personaje[] bombasV = new Personaje[6];
      private Personaje TierraH;
      private Personaje TierraV;
+     private String Turno1="Heroes";
+     private String Turno2="Villano";
      
     public TableroStratego() {
         initComponents();
@@ -274,7 +276,7 @@ public class TableroStratego extends JFrame {
         }
         
     }
-    
+   
     private int getRandom(int min, int max) {
         return (int)Math.floor(Math.random() * (max - min + 1) + min);
     }
