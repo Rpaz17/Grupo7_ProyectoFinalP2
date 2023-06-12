@@ -94,16 +94,23 @@ public class TableroStratego extends JFrame {
                 jPanel1.add(botones[f][c]);
             }
         }
-    
        botones[4][6].setText("Area Prohibida");
+       botones[4][6].setEnabled(false);
        botones[5][6].setText("Area Prohibida");
+       botones[5][6].setEnabled(false);
        botones[4][7].setText("Area Prohibida");
+       botones[4][7].setEnabled(false);
        botones[5][7].setText("Area Prohibida");
+       botones[5][7].setEnabled(false);
        
        botones[4][2].setText("Area Prohibida");
+       botones[4][2].setEnabled(false);
        botones[5][2].setText("Area Prohibida");
+       botones[5][2].setEnabled(false);
        botones[4][3].setText("Area Prohibida");
+       botones[4][3].setEnabled(false);
        botones[5][3].setText("Area Prohibida");
+       botones[5][3].setEnabled(false);
     }
      
     private void botonesMouseClicked(MouseEvent evt) {
@@ -167,41 +174,39 @@ public class TableroStratego extends JFrame {
         heroes[32] = new Personaje("Heroe", 2, "Storm", "/Imagenes_rebeca/10.mr_fantastic.png");
 
         
-        villanos[0] = new Personaje("Villano", 10, "Mr Fantastic", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[1] = new Personaje("Villano", 9, "Captain America", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[2] = new Personaje("Villano", 8, "Professor X", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[3] = new Personaje("Villano", 8, "Nick Furry", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[4] = new Personaje("Villano", 7, "Spider Man", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[5] = new Personaje("Villano", 7 ,"Wolverine", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[6] = new Personaje("Villano", 7, "Namor", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[7] = new Personaje("Villano", 6, "Daredevil", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[8] = new Personaje("Villano", 6, "Silver Surfer", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[9] = new Personaje("Villano", 6, "Hulk", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[10] = new Personaje("Villano", 6, "Iron Man", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[11] = new Personaje("Villano", 5, "Thor", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[12] = new Personaje("Villano", 5, "Human Torch", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[13] = new Personaje("Villano", 5, "Cyclops", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[14] = new Personaje("Villano",5, "Invisible Woman", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[15] = new Personaje("Villano", 4, "Ghost Rider", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[16] = new Personaje("Villano", 4, "Punisher", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[17] = new Personaje("Villano", 4, "Blade", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[18] = new Personaje("Villano", 4, "Thing", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[19] = new Personaje("Villano", 3, "Emma Frost", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[20] = new Personaje("Villano", 3, "She Hulkr", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[21] = new Personaje("Villano", 3, "Giant Man", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[22] = new Personaje("Villano", 3, "Beast", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[23] = new Personaje("Villano", 3, "Colossus", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[0] = new Personaje("Villano", 10, "Dr Doom", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[1] = new Personaje("Villano", 9, "Galactus", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[2] = new Personaje("Villano", 8, "Kingpin", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[3] = new Personaje("Villano", 8, "Magneto", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[4] = new Personaje("Villano", 7, "Apocalypse", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[5] = new Personaje("Villano", 7 ,"GreenGoblin", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[6] = new Personaje("Villano", 7, "Venom", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[7] = new Personaje("Villano", 6, "Bullseye", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[8] = new Personaje("Villano", 6, "Omega Red", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[9] = new Personaje("Villano", 6, "Onslaught", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[10] = new Personaje("Villano", 6, "Red Skull", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[11] = new Personaje("Villano", 5, "Mystique", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[12] = new Personaje("Villano", 5, "Mysterio", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[13] = new Personaje("Villano", 5, "Dr Octopus", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[14] = new Personaje("Villano",5, "Deadpool", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[15] = new Personaje("Villano", 4, "Abomination", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[16] = new Personaje("Villano", 4, "Thanos", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[17] = new Personaje("Villano", 4, "Black Cat", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[18] = new Personaje("Villano", 4, "Sabretooth", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[19] = new Personaje("Villano", 3, "Juggernaut", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[20] = new Personaje("Villano", 3, "Rhino", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[21] = new Personaje("Villano", 3, "Carnage", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[22] = new Personaje("Villano", 3, "Mole Man", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[23] = new Personaje("Villano", 3, "Lizzard", "/Imagenes_rebeca/10.mr_fantastic.png");
         villanos[24] = new Personaje("Villano", 1, "Black Widow", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[25] = new Personaje("Villano", 2, "Phoenix", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[26] = new Personaje("Villano", 2, "Elektra", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[27] = new Personaje("Villano", 2, "Dr Strange", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[28] = new Personaje("Villano", 2, "Nightcrawler", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[29] = new Personaje("Villano", 2, "Gambit", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[30] = new Personaje("Villano", 2, "Spider Girl", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[31] = new Personaje("Villano", 2, "Ice Man", "/Imagenes_rebeca/10.mr_fantastic.png");
-        villanos[32] = new Personaje("Villano", 2, "Storm", "/Imagenes_rebeca/10.mr_fantastic.png");
- 
-        
+        villanos[25] = new Personaje("Villano", 2, "Mr Sinister", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[26] = new Personaje("Villano", 2, "Sentinel 1", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[27] = new Personaje("Villano", 2, "Ultron", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[28] = new Personaje("Villano", 2, "Sand Man", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[29] = new Personaje("Villano", 2, "Leader", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[30] = new Personaje("Villano", 2, "Viper", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[31] = new Personaje("Villano", 2, "Sentinel 2", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[32] = new Personaje("Villano", 2, "Elektro", "/Imagenes_rebeca/10.mr_fantastic.png");
     }
     
     private void setPersonajes(){
@@ -210,7 +215,7 @@ public class TableroStratego extends JFrame {
         botones[9][colTH-1].setText("NovaBlast");
         botones[9][colTH+1].setText("NovaBlast");
         botones[8][colTH].setText("NovaBlast");
-        int nb=1;
+        int nb=1; //Nueva Bomba
         while(nb<=3){
             int f=getRandom(8,9);
             int c=getRandom(0,9);
