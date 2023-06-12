@@ -128,7 +128,7 @@ public class CambiarPassword extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         MiPerfil regresar=new MiPerfil(ventana,persona);
         regresar.setVisible(true);
-        this.dispose();
+        this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void txtnuevacontraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnuevacontraActionPerformed
@@ -145,7 +145,7 @@ public class CambiarPassword extends javax.swing.JFrame {
              if(nuevacontra.length()==5 && !nuevacontra.equals(viejacontra)){
              persona.setContrasena(nuevacontra);
              ventana.setVisible(true);
-             this.dispose();
+             this.setVisible(false);
              } 
              if(nuevacontra.length()>5){
              JOptionPane.showMessageDialog(null, "Error: La contraseña debe tener 5 caracteres");    

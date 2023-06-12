@@ -105,19 +105,19 @@ public class MiPerfil extends javax.swing.JFrame {
     private void EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarActionPerformed
             Eliminar delete= new Eliminar(ventana,persona);
             delete.setVisible(true);
-            this.dispose();
+            this.setVisible(false);
     }//GEN-LAST:event_EliminarActionPerformed
 
     private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
     menu_principal menu = new menu_principal(ventana,persona);
     menu.setVisible(true);
-    this.dispose(); 
+    this.setVisible(false); 
     }//GEN-LAST:event_volverActionPerformed
 
     private void CambiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CambiarActionPerformed
         CambiarPassword cambiar=new CambiarPassword(ventana,persona);
        cambiar.setVisible(true);
-       this.dispose();
+       this.setVisible(false);
     }//GEN-LAST:event_CambiarActionPerformed
 
 

@@ -1,7 +1,6 @@
 package proyecto;
+import login.*;
 
-import login.Persona;
-import login.VentaLogin;
 
 public class configuracion extends javax.swing.JFrame {
     
@@ -12,6 +11,7 @@ public class configuracion extends javax.swing.JFrame {
         initComponents();
         this.setExtendedState(6);
         this.persona=persona;
+        this.ventana=ventana;
     }
 
     
@@ -100,7 +100,7 @@ public class configuracion extends javax.swing.JFrame {
     private void btn_menuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_menuMouseClicked
     menu_principal menu = new menu_principal(ventana,persona);
     menu.setVisible(true);
-        this.dispose();
+    this.setVisible(false);
     }//GEN-LAST:event_btn_menuMouseClicked
 
 

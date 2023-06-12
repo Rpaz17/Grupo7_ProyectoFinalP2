@@ -117,7 +117,7 @@ public class VentanaRegistraPersona extends javax.swing.JFrame {
         y que esta ventana donde estamos parado se esconda
         */
         ventana.setVisible(true);
-        this.dispose();
+        this.setVisible(false);
     }//GEN-LAST:event_btnVolverActionPerformed
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
@@ -142,7 +142,7 @@ public class VentanaRegistraPersona extends javax.swing.JFrame {
             if (repuesta) {
                 JOptionPane.showMessageDialog(null, "Se registro adecuadamente");
                 ventana.setVisible(true);
-                this.dispose();
+                this.setVisible(false);
                 
                 
             } else {

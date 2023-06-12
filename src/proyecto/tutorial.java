@@ -95,7 +95,7 @@ public class tutorial extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
     menu_principal menu = new menu_principal(ventana,persona);
     menu.setVisible(true);
-    this.dispose();        
+    this.setVisible(false);       
     }//GEN-LAST:event_jButton1MouseClicked
 
     /**
