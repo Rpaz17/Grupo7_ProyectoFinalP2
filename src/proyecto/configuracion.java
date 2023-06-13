@@ -7,7 +7,7 @@ public class configuracion extends javax.swing.JFrame {
     VentaLogin ventana;
     Persona persona;
     
-    public configuracion(Persona persona) {
+    public configuracion(VentaLogin ventana,Persona persona) {
         initComponents();
         this.setExtendedState(6);
         this.persona=persona;
