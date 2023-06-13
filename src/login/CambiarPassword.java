@@ -16,7 +16,8 @@ public class CambiarPassword extends javax.swing.JFrame {
         setLocationRelativeTo(this);
         this.ventana = ventana;
         this.persona = persona;
-        jLNombre.setText("hola mundo"); 
+        jLNombre.setText(persona.getNombreUser());
+        
     }
 
     @SuppressWarnings("unchecked")

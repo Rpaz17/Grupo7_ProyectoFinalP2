@@ -6,14 +6,17 @@ import java.awt.GridLayout;
 import java.awt.image.BufferedImage;
         
 public class TableroStratego extends JFrame {
-    private JButton[][] botones = new JButton[10][10];
+    private Cuadro[][] botones = new Cuadro[10][10];
      private BufferedImage image;
      private Personaje[] heroes = new Personaje[33];
      private Personaje[] villanos = new Personaje[33];
-     private Personaje[] bombasH = new Personaje[6];
-     private Personaje[] bombasV = new Personaje[6];
-     private Personaje TierraH;
-     private Personaje TierraV;
+     private Personaje bombaH;
+     private Personaje bombaV;
+     private Personaje tierraH;
+     private Personaje tierraV;
+     
+     private Cuadro botonInicio;
+     private Cuadro botonFinal;
      
     public TableroStratego() {
         initComponents();
@@ -69,28 +72,30 @@ public class TableroStratego extends JFrame {
      private void initBotones(){
        GridLayout botonesLayout = new GridLayout(10,10);
        jPanel1.setLayout(botonesLayout);
+       int botonContador=0;
        for(int f=0; f<10;f++) {
             for(int c=0;c<10;c++){
-                botones[f][c] = new JButton();
-                botones[f][c].setName("boton_"+String.valueOf(f*c));
+                botones[f][c] = new Cuadro(f,c,botonContador);
+                botones[f][c].setName("boton_"+String.valueOf(botonContador));
                 botones[f][c].setBorder(javax.swing.BorderFactory.createEtchedBorder());
-                botones[f][c].setOpaque(false);
-                botones[f][c].setContentAreaFilled(false);
+                botonContador++;
+//                botones[f][c].setOpaque(false);
+//                botones[f][c].setContentAreaFilled(false);
                 botones[f][c].addMouseListener(new MouseAdapter() {
                         public void mouseClicked(MouseEvent evt) {
                                 botonesMouseClicked(evt);
                         }
                 });
-                botones[f][c].addActionListener(new ActionListener() {
-                    public void actionPerformed(ActionEvent evt) {
-                        botonesActionPerformed(evt);
-                    }
-                });
-                botones[f][c].addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-                    public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                        botonesPropertyChange(evt);
-                    }
-                });
+//                botones[f][c].addActionListener(new ActionListener() {
+//                    public void actionPerformed(ActionEvent evt) {
+//                        botonesActionPerformed(evt);
+//                    }
+//                });
+//                botones[f][c].addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+//                    public void propertyChange(java.beans.PropertyChangeEvent evt) {
+//                        botonesPropertyChange(evt);
+//                    }
+//                });
                 jPanel1.add(botones[f][c]);
             }
         }
@@ -114,8 +119,37 @@ public class TableroStratego extends JFrame {
     }
      
     private void botonesMouseClicked(MouseEvent evt) {
-        // TODO add your handling code here:
-    }   
+         Object source = evt.getSource();
+        Cuadro botonPresionado = ((Cuadro) source);
+        int f=botonPresionado.fila;
+        int c=botonPresionado.columna;
+        String text = botonPresionado.getText();
+       
+        if(botonInicio == null){
+            botonInicio = botonPresionado;
+            botonInicio.setText(text);
+        } else if (botonInicio.getName().equals(botonPresionado.getName())) {
+            botonInicio = null;
+        } else { 
+            if(botonPresionado.character==null) {
+                botonFinal=botonPresionado;
+                if(botonFinal != null && botonInicio !=null) {
+                    botonFinal.character = botonInicio.character;
+                    botonFinal.setText(botonInicio.getText());
+                    botonInicio.setText("");
+                    botonInicio.character=null;
+//                    botonInicio.setImage();
+//                    botonFinal.setImage();
+                    botonInicio=null;
+                    botonFinal=null;
+    }
+            }else{
+                
+                
+            }
+        }
+    }
+    
     private void botonesActionPerformed(java.awt.event.ActionEvent evt) {
 //        Object source = evt.getSource();
 //        String Name = ((JButton) source).getName();
@@ -207,20 +241,34 @@ public class TableroStratego extends JFrame {
         villanos[30] = new Personaje("Villano", 2, "Viper", "/Imagenes_rebeca/10.mr_fantastic.png");
         villanos[31] = new Personaje("Villano", 2, "Sentinel 2", "/Imagenes_rebeca/10.mr_fantastic.png");
         villanos[32] = new Personaje("Villano", 2, "Elektro", "/Imagenes_rebeca/10.mr_fantastic.png");
+        
+        tierraH = new Personaje("Tierra", 0, "Tierra Heroes", "/Imagenes_rebeca/bombaH/heroes_planet_earth.png");
+        tierraV = new Personaje("Tierra", 0, "Tierra Villanos", "/Imagenes_rebeca/bombaV/planet_earth_villano.png");
+        bombaH = new Personaje("Bomba", 0, "Nova Blast", "/Imagenes_rebeca/bombaH/nova_blast.png");
+        bombaV = new Personaje("Bomba", 0, "Pumpkin Bomb", "/Imagenes_rebeca/bombaV/pumpkin_bomb.png");
     }
     
     private void setPersonajes(){
         int colTH = getRandom(1,8);
         botones[9][colTH].setText("Tierra H");
+//        botones[9][colTH].character=tierraH;
+//        botones[9][colTH].setImage();
         botones[9][colTH-1].setText("NovaBlast");
+//        botones[9][colTH].character=bombaH;
+//        botones[9][colTH].setImage();
         botones[9][colTH+1].setText("NovaBlast");
+//        botones[9][colTH].character=bombaH;
+//        botones[9][colTH].setImage();
         botones[8][colTH].setText("NovaBlast");
+//        botones[8][colTH].character=bombaH;
+//        botones[8][colTH].setImage();
         int nb=1; //Nueva Bomba
         while(nb<=3){
             int f=getRandom(8,9);
             int c=getRandom(0,9);
             if(botones[f][c].getText().equals("")) {
                 botones[f][c].setText("NovaBlast");
+                botones[f][c].character=bombaH;
                 nb++;
             }
         }
@@ -252,6 +300,7 @@ public class TableroStratego extends JFrame {
             int c=getRandom(0,9);
             if(botones[f][c].getText().equals("")) {
                 botones[f][c].setText("PumpkinBomb");
+                botones[f][c].character=bombaV;
                 pb++;
             }
         }
@@ -268,6 +317,7 @@ public class TableroStratego extends JFrame {
                 c =getRandom(0,9);
                 if(botones[f][c].getText().equals("")) {
                     botones[f][c].setText(villanos[posicion_villano].Nombre);
+                    botones[f][c].character=villanos[posicion_villano];
                     villano_actual--;
                 }
             }
