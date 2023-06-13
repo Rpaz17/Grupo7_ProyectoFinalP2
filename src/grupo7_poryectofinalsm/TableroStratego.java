@@ -4,25 +4,17 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.awt.GridLayout;
 import java.awt.image.BufferedImage;
-import proyecto.*;
-import login.*;
-
+        
 public class TableroStratego extends JFrame {
-    menu_principal menuprincipal;
-    Persona persona;
-    VentaLogin ventana;
-    private Cuadro[][] botones = new Cuadro[10][10];
+    private JButton[][] botones = new JButton[10][10];
      private BufferedImage image;
      private Personaje[] heroes = new Personaje[33];
      private Personaje[] villanos = new Personaje[33];
-     private Personaje bombaH;
-     private Personaje bombaV;
-     private Personaje tierraH;
-     private Personaje tierraV;
+     private Personaje[] bombasH = new Personaje[6];
+     private Personaje[] bombasV = new Personaje[6];
+     private Personaje TierraH;
+     private Personaje TierraV;
      
-     private Cuadro botonInicio;
-     private Cuadro botonFinal;
-             
     public TableroStratego() {
         initComponents();
         initBotones();
@@ -41,7 +33,6 @@ public class TableroStratego extends JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,20 +44,8 @@ public class TableroStratego extends JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 519, Short.MAX_VALUE)
         );
-
-        jButton1.setText("Rendirse");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
-            }
-        });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -75,17 +54,11 @@ public class TableroStratego extends JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(106, 106, 106)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addContainerGap())
+                .addContainerGap(135, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(486, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -105,49 +78,36 @@ public class TableroStratego extends JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-            
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        menu_principal backtomenu=new menu_principal(ventana,persona);
-        backtomenu.setVisible(true);
-       this.setVisible(false);
-    }//GEN-LAST:event_jButton1MouseClicked
-
      private void initBotones(){
        GridLayout botonesLayout = new GridLayout(10,10);
        jPanel1.setLayout(botonesLayout);
-//       setResizable(true);
-       
-//       jPanel2.setMinimumSize(new Dimension(700,700));
-//       jPanel2.getClass().getResource("/Users/fampa/Documents/NetBeansProjects/Grupo7_PoryectoFinalSM/src/Imagenes_rebeca/tablero_fin.png");
-       int botonContador = 0;
+       setResizable(true);
+       jPanel2.setMinimumSize(new Dimension(700,700));
+       jPanel2.getClass().getResource("/Users/fampa/Documents/NetBeansProjects/Grupo7_PoryectoFinalSM/src/Imagenes_rebeca/tablero_fin.png");
        for(int f=0; f<10;f++) {
             for(int c=0;c<10;c++){
-                botones[f][c] = new Cuadro(f,c,botonContador);
-                botones[f][c].setName("boton_"+String.valueOf(botonContador));
-                botonContador++;
+                botones[f][c] = new JButton();
+                botones[f][c].setName("boton_"+String.valueOf(f*c));
                 botones[f][c].setBorder(javax.swing.BorderFactory.createEtchedBorder());
-//                botones[f][c].setOpaque(false);
-//                botones[f][c].setContentAreaFilled(false);
+                botones[f][c].setOpaque(false);
+                botones[f][c].setContentAreaFilled(false);
                 botones[f][c].addMouseListener(new MouseAdapter() {
                         public void mouseClicked(MouseEvent evt) {
                                 botonesMouseClicked(evt);
                         }
                 });
-                
-//                botones[f][c].addActionListener(new ActionListener() {
-//                    public void actionPerformed(ActionEvent evt) {
-//                        botonesActionPerformed(evt);
-//                    }
-//                });
-//                botones[f][c].addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-//                    public void propertyChange(java.beans.PropertyChangeEvent evt) {
-//                        botonesPropertyChange(evt);
-//                    }
-//                });
+                botones[f][c].addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent evt) {
+                        botonesActionPerformed(evt);
+                    }
+                });
+                botones[f][c].addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+                    public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                        botonesPropertyChange(evt);
+                    }
+                });
                 jPanel1.add(botones[f][c]);
+                
             }
         }
        botones[4][6].setText("Area Prohibida");
@@ -170,35 +130,7 @@ public class TableroStratego extends JFrame {
     }
      
     private void botonesMouseClicked(MouseEvent evt) {
-        Object source = evt.getSource();
-        Cuadro botonPresionado = ((Cuadro) source);
-        int f=botonPresionado.fila;
-        int c=botonPresionado.columna;
-        String text = botonPresionado.getText();
-       
-        if(botonInicio == null){
-            botonInicio = botonPresionado;
-            botonInicio.setText(text);
-        } else if (botonInicio.getName().equals(botonPresionado.getName())) {
-            botonInicio = null;
-        } else { 
-            if(botonPresionado.character==null) {
-                botonFinal=botonPresionado;
-                if(botonFinal != null && botonInicio !=null) {
-                    botonFinal.character = botonInicio.character;
-                    botonFinal.setText(botonInicio.getText());
-                    botonInicio.setText("");
-                    botonInicio.character=null;
-//                    botonInicio.setImage();
-//                    botonFinal.setImage();
-                    botonInicio=null;
-                    botonFinal=null;
-                }
-                    
-            } else {
-                
-            }
-        }
+        // TODO add your handling code here:
     }   
     private void botonesActionPerformed(java.awt.event.ActionEvent evt) {
 //        Object source = evt.getSource();
@@ -223,103 +155,88 @@ public class TableroStratego extends JFrame {
     }
     
     private void initPersonajes() {
-        heroes[0] = new Personaje("Heroe", 10, "Mr Fantastic", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[1] = new Personaje("Heroe", 9, "Captain America", "/Imagenes_rebeca/heroes_tablero/9.cap_america.png");
-        heroes[2] = new Personaje("Heroe", 8, "Professor X", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[3] = new Personaje("Heroe", 8, "Nick Furry", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[4] = new Personaje("Heroe", 7, "Spider Man", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[5] = new Personaje("Heroe", 7 ,"Wolverine", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[6] = new Personaje("Heroe", 7, "Namor", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[7] = new Personaje("Heroe", 6, "Daredevil", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[8] = new Personaje("Heroe", 6, "Silver Surfer", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[9] = new Personaje("Heroe", 6, "Hulk", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[10] = new Personaje("Heroe", 6, "Iron Man", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[11] = new Personaje("Heroe", 5, "Thor", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[12] = new Personaje("Heroe", 5, "Human Torch", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[13] = new Personaje("Heroe", 5, "Cyclops", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[14] = new Personaje("Heroe",5, "Invisible Woman", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[15] = new Personaje("Heroe", 4, "Ghost Rider", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[16] = new Personaje("Heroe", 4, "Punisher", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[17] = new Personaje("Heroe", 4, "Blade", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[18] = new Personaje("Heroe", 4, "Thing", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[19] = new Personaje("Heroe", 3, "Emma Frost", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[20] = new Personaje("Heroe", 3, "She Hulkr", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[21] = new Personaje("Heroe", 3, "Giant Man", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[22] = new Personaje("Heroe", 3, "Beast", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[23] = new Personaje("Heroe", 3, "Colossus", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[24] = new Personaje("Heroe", 1, "Black Widow", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[25] = new Personaje("Heroe", 2, "Phoenix", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[26] = new Personaje("Heroe", 2, "Elektra", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[27] = new Personaje("Heroe", 2, "Dr Strange", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[28] = new Personaje("Heroe", 2, "Nightcrawler", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[29] = new Personaje("Heroe", 2, "Gambit", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[30] = new Personaje("Heroe", 2, "Spider Girl", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[31] = new Personaje("Heroe", 2, "Ice Man", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        heroes[32] = new Personaje("Heroe", 2, "Storm", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
+        heroes[0] = new Personaje("Heroe", 10, "Mr Fantastic", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[1] = new Personaje("Heroe", 9, "Captain America", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[2] = new Personaje("Heroe", 8, "Professor X", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[3] = new Personaje("Heroe", 8, "Nick Furry", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[4] = new Personaje("Heroe", 7, "Spider Man", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[5] = new Personaje("Heroe", 7 ,"Wolverine", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[6] = new Personaje("Heroe", 7, "Namor", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[7] = new Personaje("Heroe", 6, "Daredevil", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[8] = new Personaje("Heroe", 6, "Silver Surfer", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[9] = new Personaje("Heroe", 6, "Hulk", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[10] = new Personaje("Heroe", 6, "Iron Man", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[11] = new Personaje("Heroe", 5, "Thor", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[12] = new Personaje("Heroe", 5, "Human Torch", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[13] = new Personaje("Heroe", 5, "Cyclops", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[14] = new Personaje("Heroe",5, "Invisible Woman", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[15] = new Personaje("Heroe", 4, "Ghost Rider", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[16] = new Personaje("Heroe", 4, "Punisher", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[17] = new Personaje("Heroe", 4, "Blade", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[18] = new Personaje("Heroe", 4, "Thing", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[19] = new Personaje("Heroe", 3, "Emma Frost", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[20] = new Personaje("Heroe", 3, "She Hulkr", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[21] = new Personaje("Heroe", 3, "Giant Man", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[22] = new Personaje("Heroe", 3, "Beast", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[23] = new Personaje("Heroe", 3, "Colossus", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[24] = new Personaje("Heroe", 1, "Black Widow", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[25] = new Personaje("Heroe", 2, "Phoenix", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[26] = new Personaje("Heroe", 2, "Elektra", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[27] = new Personaje("Heroe", 2, "Dr Strange", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[28] = new Personaje("Heroe", 2, "Nightcrawler", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[29] = new Personaje("Heroe", 2, "Gambit", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[30] = new Personaje("Heroe", 2, "Spider Girl", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[31] = new Personaje("Heroe", 2, "Ice Man", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[32] = new Personaje("Heroe", 2, "Storm", "/Imagenes_rebeca/10.mr_fantastic.png");
 
         
-        villanos[0] = new Personaje("Villano", 10, "Dr Doom", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[1] = new Personaje("Villano", 9, "Galactus", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[2] = new Personaje("Villano", 8, "Kingpin", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[3] = new Personaje("Villano", 8, "Magneto", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[4] = new Personaje("Villano", 7, "Apocalypse", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[5] = new Personaje("Villano", 7 ,"GreenGoblin", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[6] = new Personaje("Villano", 7, "Venom", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[7] = new Personaje("Villano", 6, "Bullseye", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[8] = new Personaje("Villano", 6, "Omega Red", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[9] = new Personaje("Villano", 6, "Onslaught", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[10] = new Personaje("Villano", 6, "Red Skull", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[11] = new Personaje("Villano", 5, "Mystique", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[12] = new Personaje("Villano", 5, "Mysterio", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[13] = new Personaje("Villano", 5, "Dr Octopus", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[14] = new Personaje("Villano",5, "Deadpool", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[15] = new Personaje("Villano", 4, "Abomination", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[16] = new Personaje("Villano", 4, "Thanos", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[17] = new Personaje("Villano", 4, "Black Cat", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[18] = new Personaje("Villano", 4, "Sabretooth", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[19] = new Personaje("Villano", 3, "Juggernaut", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[20] = new Personaje("Villano", 3, "Rhino", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[21] = new Personaje("Villano", 3, "Carnage", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[22] = new Personaje("Villano", 3, "Mole Man", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[23] = new Personaje("Villano", 3, "Lizzard", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[24] = new Personaje("Villano", 1, "Black Widow", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[25] = new Personaje("Villano", 2, "Mr Sinister", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[26] = new Personaje("Villano", 2, "Sentinel 1", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[27] = new Personaje("Villano", 2, "Ultron", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[28] = new Personaje("Villano", 2, "Sand Man", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[29] = new Personaje("Villano", 2, "Leader", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[30] = new Personaje("Villano", 2, "Viper", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[31] = new Personaje("Villano", 2, "Sentinel 2", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        villanos[32] = new Personaje("Villano", 2, "Elektro", "/Imagenes_rebeca/heroes_tablero/10.mr_fantastic.png");
-        
-        tierraH = new Personaje("Tierra", 0, "Tierra Heroes", "/Imagenes_rebeca/bombaH/heroes_planet_earth.png");
-        tierraV = new Personaje("Tierra", 0, "Tierra Villanos", "/Imagenes_rebeca/bombaV/planet_earth_villano.png");
-        bombaH = new Personaje("Bomba", 0, "Nova Blast", "/Imagenes_rebeca/bombaH/nova_blast.png");
-        bombaV = new Personaje("Bomba", 0, "Pumpkin Bomb", "/Imagenes_rebeca/bombaV/pumpkin_bomb.png");
+        villanos[0] = new Personaje("Villano", 10, "Dr Doom", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[1] = new Personaje("Villano", 9, "Galactus", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[2] = new Personaje("Villano", 8, "Kingpin", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[3] = new Personaje("Villano", 8, "Magneto", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[4] = new Personaje("Villano", 7, "Apocalypse", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[5] = new Personaje("Villano", 7 ,"GreenGoblin", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[6] = new Personaje("Villano", 7, "Venom", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[7] = new Personaje("Villano", 6, "Bullseye", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[8] = new Personaje("Villano", 6, "Omega Red", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[9] = new Personaje("Villano", 6, "Onslaught", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[10] = new Personaje("Villano", 6, "Red Skull", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[11] = new Personaje("Villano", 5, "Mystique", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[12] = new Personaje("Villano", 5, "Mysterio", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[13] = new Personaje("Villano", 5, "Dr Octopus", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[14] = new Personaje("Villano",5, "Deadpool", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[15] = new Personaje("Villano", 4, "Abomination", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[16] = new Personaje("Villano", 4, "Thanos", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[17] = new Personaje("Villano", 4, "Black Cat", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[18] = new Personaje("Villano", 4, "Sabretooth", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[19] = new Personaje("Villano", 3, "Juggernaut", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[20] = new Personaje("Villano", 3, "Rhino", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[21] = new Personaje("Villano", 3, "Carnage", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[22] = new Personaje("Villano", 3, "Mole Man", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[23] = new Personaje("Villano", 3, "Lizzard", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[24] = new Personaje("Villano", 1, "Black Widow", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[25] = new Personaje("Villano", 2, "Mr Sinister", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[26] = new Personaje("Villano", 2, "Sentinel 1", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[27] = new Personaje("Villano", 2, "Ultron", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[28] = new Personaje("Villano", 2, "Sand Man", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[29] = new Personaje("Villano", 2, "Leader", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[30] = new Personaje("Villano", 2, "Viper", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[31] = new Personaje("Villano", 2, "Sentinel 2", "/Imagenes_rebeca/10.mr_fantastic.png");
+        villanos[32] = new Personaje("Villano", 2, "Elektro", "/Imagenes_rebeca/10.mr_fantastic.png");
     }
     
     private void setPersonajes(){
         int colTH = getRandom(1,8);
         botones[9][colTH].setText("Tierra H");
-        botones[9][colTH].character = tierraH;
-//        botones[9][colTH].setImage();
         botones[9][colTH-1].setText("NovaBlast");
-        botones[9][colTH-1].character = bombaH;
-//        botones[9][colTH-1].setImage();
         botones[9][colTH+1].setText("NovaBlast");
-        botones[9][colTH+1].character = bombaH;
-//        botones[9][colTH+1].setImage();
         botones[8][colTH].setText("NovaBlast");
-        botones[8][colTH].character = bombaH;
-//        botones[8][colTH].setImage();
         int nb=1; //Nueva Bomba
         while(nb<=3){
             int f=getRandom(8,9);
             int c=getRandom(0,9);
             if(botones[f][c].getText().equals("")) {
                 botones[f][c].setText("NovaBlast");
-                botones[f][c].character = bombaH;
-//                botones[f][c].setImage();
                 nb++;
             }
         }
@@ -335,8 +252,6 @@ public class TableroStratego extends JFrame {
                 c =getRandom(0,9);
                 if(botones[f][c].getText().equals("")) {
                     botones[f][c].setText(heroes[posicion_heroe].Nombre);
-                    botones[f][c].character = heroes[posicion_heroe];
-//                    botones[f][c].setImage();
                     heroe_actual--;
                 }
             }
@@ -344,25 +259,15 @@ public class TableroStratego extends JFrame {
         
         int colTV = getRandom(1,8);
         botones[0][colTV].setText("Tierra V");
-        botones[0][colTV].character = tierraV;
-//        botones[0][colTV].setImage();
         botones[0][colTV-1].setText("PumpkinBomb");
-        botones[0][colTV-1].character = bombaV;
-//        botones[0][colTV-1].setImage();
         botones[0][colTV+1].setText("PumpkinBomb");
-        botones[0][colTV+1].character=bombaV;
-//        botones[0][colTV+1].setImage();
         botones[1][colTV].setText("PumpkinBomb");
-        botones[1][colTV].character = bombaV;
-//        botones[1][colTV].setImage();
         int pb=1;
         while(pb<=3){
             int f=getRandom(0,1);
             int c=getRandom(0,9);
             if(botones[f][c].getText().equals("")) {
                 botones[f][c].setText("PumpkinBomb");
-                botones[f][c].character = bombaV;
-//                botones[f][c].setImage();
                 pb++;
             }
         }
@@ -379,14 +284,12 @@ public class TableroStratego extends JFrame {
                 c =getRandom(0,9);
                 if(botones[f][c].getText().equals("")) {
                     botones[f][c].setText(villanos[posicion_villano].Nombre);
-                    botones[f][c].character = villanos[posicion_villano];
-//                    botones[f][c].setImage();
                     villano_actual--;
                 }
             }
         }
     }
-    
+
     private int getRandom(int min, int max) {
         return (int)Math.floor(Math.random() * (max - min + 1) + min);
     }
@@ -426,7 +329,6 @@ public class TableroStratego extends JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables

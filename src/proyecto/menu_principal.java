@@ -7,6 +7,7 @@ public class menu_principal extends javax.swing.JFrame {
     
     Persona persona;
     VentaLogin ventana;
+    
     public menu_principal(VentaLogin ventana, Persona persona) {
         initComponents();
         this.setExtendedState(6);

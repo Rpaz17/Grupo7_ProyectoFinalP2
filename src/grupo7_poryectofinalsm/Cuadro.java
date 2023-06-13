@@ -1,40 +1,11 @@
 package grupo7_poryectofinalsm;
-
-import java.awt.Image;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-
 public class Cuadro extends javax.swing.JButton{
-    Personaje character;
+//    Personaje character=new Personaje;
     boolean disponible=false;
     boolean habilitado=false;
     int numero=0;
-    int fila=0;
-    int columna=0;
     
-    public Cuadro(int f, int c, int num){
+    public Cuadro(){
         super();
-        fila=f;
-        columna=c; 
-        numero = num;
-    }
-    
-    public void setImage() {
-        if(this.character != null) {
-            int bWidth =this.getWidth();
-            int bHeight = this.getHeight();
-            int offset = this.getInsets().left;
-
-            ImageIcon icon = new ImageIcon(getClass().getResource(character.ImagePath));            
-            Icon iconr = resizeIcon(icon , bWidth - offset , bHeight - offset);
-            this.setIcon(iconr);
-        } else
-            this.setIcon(null);
-    } 
-    
-     private static Icon resizeIcon(ImageIcon icon, int resizedWidth, int resizedHeight) {
-        Image img = icon.getImage();  
-        Image resizedImage = img.getScaledInstance(resizedWidth, resizedHeight,  java.awt.Image.SCALE_SMOOTH);  
-        return new ImageIcon(resizedImage);
     }
 }
