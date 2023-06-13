@@ -3,7 +3,7 @@ import grupo7_poryectofinalsm.*;
 import login.*;
 
 public class bando extends javax.swing.JFrame {
-     TableroStratego tablero;
+    TableroStratego tableroo;
     VentaLogin ventana;
     Persona persona;
 
@@ -128,14 +128,14 @@ public class bando extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_regresarMouseClicked
 
     private void btn_villanosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_villanosMouseClicked
-        TableroStratego tablero=new TableroStratego(ventana,persona);
-        tablero.setVisible(true);
+        TableroStratego window=new TableroStratego(ventana,persona);
+        window.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btn_villanosMouseClicked
 
     private void btn_heroesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_heroesMouseClicked
-        TableroStratego tablero=new TableroStratego(ventana,persona);
-        tablero.setVisible(true);
+        TableroStratego window2=new TableroStratego(ventana,persona);
+        window2.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btn_heroesMouseClicked
 
