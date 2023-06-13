@@ -14,8 +14,6 @@ public class TableroStratego extends JFrame {
      private Personaje[] bombasV = new Personaje[6];
      private Personaje TierraH;
      private Personaje TierraV;
-     private String Turno1="Heroes";
-     private String Turno2="Villano";
      
     public TableroStratego() {
         initComponents();
@@ -83,6 +81,8 @@ public class TableroStratego extends JFrame {
      private void initBotones(){
        GridLayout botonesLayout = new GridLayout(10,10);
        jPanel1.setLayout(botonesLayout);
+       setResizable(true);
+       jPanel2.setMinimumSize(new Dimension(700,700));
        jPanel2.getClass().getResource("/Users/fampa/Documents/NetBeansProjects/Grupo7_PoryectoFinalSM/src/Imagenes_rebeca/tablero_fin.png");
        for(int f=0; f<10;f++) {
             for(int c=0;c<10;c++){
@@ -107,6 +107,7 @@ public class TableroStratego extends JFrame {
                     }
                 });
                 jPanel1.add(botones[f][c]);
+                
             }
         }
        botones[4][6].setText("Area Prohibida");
@@ -287,9 +288,8 @@ public class TableroStratego extends JFrame {
                 }
             }
         }
-        
     }
-   
+
     private int getRandom(int min, int max) {
         return (int)Math.floor(Math.random() * (max - min + 1) + min);
     }
