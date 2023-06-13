@@ -4,8 +4,8 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.awt.GridLayout;
 import java.awt.image.BufferedImage;
-import login.Persona;
-import login.VentaLogin;
+import login.*;
+import proyecto.*;
         
 public class TableroStratego extends JFrame {
     private Cuadro[][] botones = new Cuadro[10][10];
@@ -42,33 +42,72 @@ public class TableroStratego extends JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        btn_menu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 127, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setOpaque(false);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 535, Short.MAX_VALUE)
+            .addGap(0, 768, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 519, Short.MAX_VALUE)
+            .addGap(0, 770, Short.MAX_VALUE)
         );
+
+        jPanel4.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -2, -1, 770));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes_rebeca/tablero_fin.png"))); // NOI18N
+        jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
+
+        btn_menu.setText("MENU");
+        btn_menu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_menuMouseClicked(evt);
+            }
+        });
+        jPanel5.add(btn_menu);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(106, 106, 106)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -79,24 +118,22 @@ public class TableroStratego extends JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btn_menuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_menuMouseClicked
+       menu_principal menu = new menu_principal(ventana,persona);
+    menu.setVisible(true);
+    this.setVisible(false);
+    }//GEN-LAST:event_btn_menuMouseClicked
+
      private void initBotones(){
        GridLayout botonesLayout = new GridLayout(10,10);
        jPanel1.setLayout(botonesLayout);
-
-       setResizable(true);
-       jPanel2.setMinimumSize(new Dimension(700,700));
-       jPanel2.getClass().getResource("/Users/fampa/Documents/NetBeansProjects/Grupo7_PoryectoFinalSM/src/Imagenes_rebeca/tablero_fin.png");
        int botonContador=0;
-
        for(int f=0; f<10;f++) {
             for(int c=0;c<10;c++){
                 botones[f][c] = new Cuadro(f,c,botonContador);
@@ -121,7 +158,6 @@ public class TableroStratego extends JFrame {
 //                    }
 //                });
                 jPanel1.add(botones[f][c]);
-                
             }
         }
        botones[4][6].setText("Area Prohibida");
@@ -169,7 +205,6 @@ public class TableroStratego extends JFrame {
                     botonFinal=null;
     }
             }else{
-                
                 
             }
         }
@@ -276,9 +311,17 @@ public class TableroStratego extends JFrame {
     private void setPersonajes(){
         int colTH = getRandom(1,8);
         botones[9][colTH].setText("Tierra H");
+//        botones[9][colTH].character=tierraH;
+//        botones[9][colTH].setImage();
         botones[9][colTH-1].setText("NovaBlast");
+//        botones[9][colTH].character=bombaH;
+//        botones[9][colTH].setImage();
         botones[9][colTH+1].setText("NovaBlast");
+//        botones[9][colTH].character=bombaH;
+//        botones[9][colTH].setImage();
         botones[8][colTH].setText("NovaBlast");
+//        botones[8][colTH].character=bombaH;
+//        botones[8][colTH].setImage();
         int nb=1; //Nueva Bomba
         while(nb<=3){
             int f=getRandom(8,9);
@@ -339,8 +382,9 @@ public class TableroStratego extends JFrame {
                 }
             }
         }
+        
     }
-
+    
     private int getRandom(int min, int max) {
         return (int)Math.floor(Math.random() * (max - min + 1) + min);
     }
@@ -348,8 +392,14 @@ public class TableroStratego extends JFrame {
      * @param args the command line arguments
      */
 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_menu;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     // End of variables declaration//GEN-END:variables
 }

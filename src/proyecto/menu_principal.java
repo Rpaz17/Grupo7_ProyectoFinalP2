@@ -34,7 +34,7 @@ public class menu_principal extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jButton4 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
-        jButton5 = new javax.swing.JButton();
+        btn_universo = new javax.swing.JButton();
         nose1 = new javax.swing.JLabel();
         nose2 = new javax.swing.JLabel();
 
@@ -89,8 +89,13 @@ public class menu_principal extends javax.swing.JFrame {
 
         jPanel6.setOpaque(false);
 
-        jButton5.setText("UNIVERSO MARVEL");
-        jPanel6.add(jButton5);
+        btn_universo.setText("UNIVERSO MARVEL");
+        btn_universo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_universoMouseClicked(evt);
+            }
+        });
+        jPanel6.add(btn_universo);
 
         nose1.setText("jLabel1");
 
@@ -159,7 +164,7 @@ public class menu_principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-    configuracion set=  new configuracion(ventana,persona);
+ configuracion set=  new configuracion(ventana,persona);
     set.setVisible(true);
     this.setVisible(false);
     }//GEN-LAST:event_jButton1MouseClicked
@@ -178,17 +183,26 @@ public class menu_principal extends javax.swing.JFrame {
     }//GEN-LAST:event_MiPerfilActionPerformed
 
     private void CerrarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CerrarSesionMouseClicked
-    ventana.setVisible(true); // Vuelve a hacer visible la ventana de inicio de sesión
+   
+        ventana.setVisible(true); // Vuelve a hacer visible la ventana de inicio de sesión
     this.setVisible(false);
     }//GEN-LAST:event_CerrarSesionMouseClicked
+
+    private void btn_universoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_universoMouseClicked
+        universo mostrar =new universo(ventana,persona);
+        mostrar.setVisible(true);
+        this.setVisible(false);
+        
+            // TODO add your handling code here:
+    }//GEN-LAST:event_btn_universoMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton CerrarSesion;
     private javax.swing.JButton MiPerfil;
+    private javax.swing.JButton btn_universo;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

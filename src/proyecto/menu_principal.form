@@ -165,10 +165,13 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="jButton5">
+            <Component class="javax.swing.JButton" name="btn_universo">
               <Properties>
                 <Property name="text" type="java.lang.String" value="UNIVERSO MARVEL"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_universoMouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
