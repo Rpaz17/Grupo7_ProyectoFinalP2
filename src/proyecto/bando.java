@@ -124,17 +124,19 @@ public class bando extends javax.swing.JFrame {
     private void btn_regresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_regresarMouseClicked
     oponente ventana1=new oponente(ventana,persona);
      ventana1.setVisible(true);
-     this.setVisible(false);
+    this.setVisible(false);
     }//GEN-LAST:event_btn_regresarMouseClicked
 
     private void btn_villanosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_villanosMouseClicked
         TableroStratego tablero=new TableroStratego();
         tablero.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btn_villanosMouseClicked
 
     private void btn_heroesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_heroesMouseClicked
         TableroStratego tablero=new TableroStratego();
         tablero.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btn_heroesMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
