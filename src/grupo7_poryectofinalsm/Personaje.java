@@ -10,5 +10,5 @@ public class Personaje {
         Nivel=nivel;
         Nombre=nombre;
         ImagePath=imagepath;
-    }       
+    } 
 }

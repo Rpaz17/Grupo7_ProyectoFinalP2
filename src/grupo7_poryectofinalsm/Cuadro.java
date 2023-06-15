@@ -5,8 +5,8 @@ import javax.swing.ImageIcon;
 
 public class Cuadro extends javax.swing.JButton{
     Personaje character;
-    boolean disponible=false;
-    boolean habilitado=false;
+    boolean disponible=true;
+    boolean habilitado=true;
     int numero=0;
     int fila=0;
     int columna=0;
@@ -16,6 +16,11 @@ public class Cuadro extends javax.swing.JButton{
         fila=f;
         columna=c; 
         numero = num;
+        character=null;
+    }
+    
+    public void SetCharacter(Personaje person) {
+        character = new Personaje(person.Tipo, person.Nivel, person.Nombre, person.ImagePath);
     }
     
     public void setImage() {

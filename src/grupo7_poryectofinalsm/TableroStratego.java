@@ -18,6 +18,7 @@ public class TableroStratego extends JFrame {
      private Personaje bombaV;
      private Personaje tierraH;
      private Personaje tierraV;
+     private String turnoPara="Heroe";
      
      private Cuadro botonInicio;
      private Cuadro botonFinal;
@@ -160,23 +161,31 @@ public class TableroStratego extends JFrame {
                 jPanel1.add(botones[f][c]);
             }
         }
-       botones[4][6].setText("Area Prohibida");
-       botones[4][6].setEnabled(false);
-       botones[5][6].setText("Area Prohibida");
-       botones[5][6].setEnabled(false);
-       botones[4][7].setText("Area Prohibida");
-       botones[4][7].setEnabled(false);
-       botones[5][7].setText("Area Prohibida");
-       botones[5][7].setEnabled(false);
+       botones[4][6].setText("");
+       botones[4][6].setBackground(Color.YELLOW);
+       botones[4][6].disponible=false;
+       botones[5][6].setText("");
+       botones[5][6].setBackground(Color.YELLOW);
+       botones[5][6].disponible=false;
+       botones[4][7].setText("");
+       botones[4][7].setBackground(Color.YELLOW);
+       botones[4][7].disponible=false;
+       botones[5][7].setText("");
+       botones[5][7].setBackground(Color.YELLOW);
+       botones[5][7].disponible=false;
        
-       botones[4][2].setText("Area Prohibida");
-       botones[4][2].setEnabled(false);
-       botones[5][2].setText("Area Prohibida");
-       botones[5][2].setEnabled(false);
-       botones[4][3].setText("Area Prohibida");
-       botones[4][3].setEnabled(false);
-       botones[5][3].setText("Area Prohibida");
-       botones[5][3].setEnabled(false);
+       botones[4][2].setText("");
+       botones[4][2].setBackground(Color.MAGENTA);
+       botones[4][2].disponible=false;
+       botones[5][2].setText("");
+       botones[5][2].setBackground(Color.MAGENTA);
+       botones[5][2].disponible=false;
+       botones[4][3].setText("");
+       botones[4][3].setBackground(Color.MAGENTA);
+       botones[4][3].disponible=false;
+       botones[5][3].setText("");
+       botones[5][3].setBackground(Color.MAGENTA);
+       botones[5][3].disponible=false;
     }
      
     private void botonesMouseClicked(MouseEvent evt) {
@@ -184,33 +193,125 @@ public class TableroStratego extends JFrame {
         Cuadro botonPresionado = ((Cuadro) source);
         int f=botonPresionado.fila;
         int c=botonPresionado.columna;
+        boolean mover=false;
         String text = botonPresionado.getText();
-       
-        if(botonInicio == null){
-            botonInicio = botonPresionado;
-            botonInicio.setText(text);
-        } else if (botonInicio.getName().equals(botonPresionado.getName())) {
-            botonInicio = null;
-        } else { 
-            if(botonPresionado.character==null) {
-                botonFinal=botonPresionado;
-                if(botonFinal != null && botonInicio !=null) {
-                    botonFinal.character = botonInicio.character;
-                    botonFinal.setText(botonInicio.getText());
-                    botonInicio.setText("");
-                    botonInicio.character=null;
-//                    botonInicio.setImage();
-//                    botonFinal.setImage();
-                    botonInicio=null;
-                    botonFinal=null;
+        botonPresionado.setBorderPainted(true);
+        
+        if(botonPresionado.disponible){
+                if(botonInicio == null) {
+                    if(botonPresionado.character != null && botonPresionado.habilitado) {
+                        if (!botonPresionado.character.Tipo.equals("Tierra") && !botonPresionado.character.Tipo.equals("Bomba")){
+                            botonPresionado.setBorder(BorderFactory.createLineBorder(Color.RED, 5, true));
+                            botonInicio = botonPresionado;
+                            botonInicio.setText(text);
+                        }
+                    } 
+                } else { 
+                    if (botonInicio.numero==botonPresionado.numero) {
+                        botonInicio.setBorder(BorderFactory.createEmptyBorder());
+                        botonPresionado.setBorder(BorderFactory.createEmptyBorder());
+                        botonInicio = null;
+                    } else {
+                        if (botonInicio.fila==botonPresionado.fila){
+                            if(botonInicio.character.Nivel==2){
+                                int valorinicial, valorfinal;
+                                mover=true;
+                                if(botonInicio.columna<botonPresionado.columna) {
+                                    valorinicial=botonInicio.columna;
+                                    valorfinal=botonPresionado.columna;
+                                } else {
+                                    valorinicial=botonPresionado.columna;
+                                    valorfinal=botonInicio.columna;
+                                }
+                                for(int col=valorinicial+1; col<valorfinal;col++) {
+                                    if(botones[botonInicio.fila][col].character !=null) {
+                                        mover=false;
+                                        break;
+                                    }
+                                }
+                            } else{
+                                  if((botonInicio.columna>0 && botonPresionado.columna==botonInicio.columna-1) || (botonInicio.columna<9 && botonPresionado.columna==botonInicio.columna+1)){
+                                            mover=true;
+                                   }
+                            }
+                        } else if(botonInicio.columna==botonPresionado.columna){
+                            if(botonInicio.character.Nivel==2){
+                                int valorinicial, valorfinal;
+                                mover=true;
+                                if(botonInicio.fila<botonPresionado.fila) {
+                                    valorinicial=botonInicio.fila;
+                                    valorfinal=botonPresionado.fila;
+                                } else {
+                                    valorinicial=botonPresionado.fila;
+                                    valorfinal=botonInicio.fila;
+                                }
+                                for(int fil=valorinicial+1; fil<valorfinal;fil++) {
+                                    if(botones[fil][botonInicio.columna].character !=null) {
+                                        mover=false;
+                                        break;
+                                    }
+                                }
+                            } else{
+                                if((botonInicio.fila>0 && botonPresionado.fila==botonInicio.fila-1) || (botonInicio.fila<9 && botonPresionado.fila==botonInicio.fila+1)){
+                                      mover=true;       
+                                }
+                            }
+                         }// cierre if verificacion de misma fila y misma columna
+                        if(botonPresionado.character==null && mover) {
+                            botonInicio.setBorder(BorderFactory.createEmptyBorder());
+                            botonPresionado.SetCharacter( botonInicio.character);
+                            botonPresionado.setText(botonInicio.getText());
+                            botonInicio.setText("");
+                            botonInicio.character=null;
+                            botonInicio=null;
+                            cambioTurno();
+    //                    botonInicio.setImage();
+    //                    botonFinal.setImage();
+                       } else if(botonInicio.character.Tipo.equals(botonPresionado.character.Tipo)) { 
+                            botonInicio.setBorder(BorderFactory.createEmptyBorder());
+                            botonPresionado.setBorder(BorderFactory.createLineBorder(Color.RED, 5, true));
+                            botonInicio = botonPresionado;
+                            botonInicio.setText(text);
+                        } else if (botonPresionado.character !=null && mover 
+                                        && !(botonPresionado.character.Nombre.equals("Pumpkin Bomb") && botonInicio.character.Tipo.equals("Villano"))
+                                        && !(botonPresionado.character.Nombre.equals("Nova Blast") && botonInicio.character.Tipo.equals("Heroe"))){ 
+                            botonInicio.setBorder(BorderFactory.createEmptyBorder());
+                            if ((botonInicio.character.Nivel==10 && botonPresionado.character.Nivel==1)){
+                                botonInicio.character=null;
+                                botonInicio.setText(" ");
+                            } else if((botonInicio.character.Nivel==1 && botonPresionado.character.Nivel==10)){
+                                botonPresionado.character=null;
+                                botonPresionado.setText(" ");
+                            }else if((botonInicio.character.Nivel==3 && botonPresionado.character.Nivel==11)){
+                                botonPresionado.character=null;
+                                botonPresionado.setText(" ");
+                            }else if((botonInicio.character.Nivel==11 && botonPresionado.character.Nivel==3)){
+                                 botonInicio.character=null;
+                                 botonInicio.setText(" ");
+                            } else {
+                                if(botonInicio.character.Nivel>botonPresionado.character.Nivel){
+                                    botonPresionado.character=null;
+                                    botonPresionado.setText(" ");
+                                    //Falta mover la pieza que se elimino al panel de a lado y llevar contador
+                                    // Fa;ta descubrir pieza ganadora
+                                } else if(botonInicio.character.Nivel<botonPresionado.character.Nivel){
+                                  botonInicio.setText(" ");
+                                  botonInicio.character=null;
+                                }else if (botonInicio.character.Nivel==botonPresionado.character.Nivel){
+                                      botonPresionado.character=null;
+                                      botonPresionado.setText(" ");
+                                      botonInicio.character=null;
+                                      botonInicio.setText(" ");
+                                }//comprobar los niveles y eliminar fichas
+                            }
+                            botonInicio=null;   
+                            cambioTurno();
+                        }    
+                    }
+                }// cierre if si boton inicio es distinto a null    
+        }// cierre if si boton esta disponible
     }
-            }else{
-                
-            }
-        }
-    }
-    
-    private void botonesActionPerformed(java.awt.event.ActionEvent evt) {
+//    private void botonesActionPerformed(java.awt.event.ActionEvent evt) {
 //        Object source = evt.getSource();
 //        String Name = ((JButton) source).getName();
 //        int bWidth =((JButton) source).getWidth();
@@ -221,7 +322,7 @@ public class TableroStratego extends JFrame {
 //            Icon iconr = resizeIcon(icon , bWidth - offset , bHeight - offset);
 //            botones[0][0].setIcon(iconr); 
 //        }
-    }
+//    }
     private void botonesPropertyChange(java.beans.PropertyChangeEvent evt) {
 // TODO add your handling code here:
     }
@@ -236,7 +337,7 @@ public class TableroStratego extends JFrame {
         heroes[0] = new Personaje("Heroe", 10, "Mr Fantastic", "/Imagenes_rebeca/10.mr_fantastic.png");
         heroes[1] = new Personaje("Heroe", 9, "Captain America", "/Imagenes_rebeca/10.mr_fantastic.png");
         heroes[2] = new Personaje("Heroe", 8, "Professor X", "/Imagenes_rebeca/10.mr_fantastic.png");
-        heroes[3] = new Personaje("Heroe", 8, "Nick Furry", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[3] = new Personaje("Heroe", 8, "Nick Fury", "/Imagenes_rebeca/10.mr_fantastic.png");
         heroes[4] = new Personaje("Heroe", 7, "Spider Man", "/Imagenes_rebeca/10.mr_fantastic.png");
         heroes[5] = new Personaje("Heroe", 7 ,"Wolverine", "/Imagenes_rebeca/10.mr_fantastic.png");
         heroes[6] = new Personaje("Heroe", 7, "Namor", "/Imagenes_rebeca/10.mr_fantastic.png");
@@ -253,7 +354,7 @@ public class TableroStratego extends JFrame {
         heroes[17] = new Personaje("Heroe", 4, "Blade", "/Imagenes_rebeca/10.mr_fantastic.png");
         heroes[18] = new Personaje("Heroe", 4, "Thing", "/Imagenes_rebeca/10.mr_fantastic.png");
         heroes[19] = new Personaje("Heroe", 3, "Emma Frost", "/Imagenes_rebeca/10.mr_fantastic.png");
-        heroes[20] = new Personaje("Heroe", 3, "She Hulkr", "/Imagenes_rebeca/10.mr_fantastic.png");
+        heroes[20] = new Personaje("Heroe", 3, "She Hulk", "/Imagenes_rebeca/10.mr_fantastic.png");
         heroes[21] = new Personaje("Heroe", 3, "Giant Man", "/Imagenes_rebeca/10.mr_fantastic.png");
         heroes[22] = new Personaje("Heroe", 3, "Beast", "/Imagenes_rebeca/10.mr_fantastic.png");
         heroes[23] = new Personaje("Heroe", 3, "Colossus", "/Imagenes_rebeca/10.mr_fantastic.png");
@@ -304,31 +405,31 @@ public class TableroStratego extends JFrame {
         
         tierraH = new Personaje("Tierra", 0, "Tierra Heroes", "/Imagenes_rebeca/bombaH/heroes_planet_earth.png");
         tierraV = new Personaje("Tierra", 0, "Tierra Villanos", "/Imagenes_rebeca/bombaV/planet_earth_villano.png");
-        bombaH = new Personaje("Bomba", 0, "Nova Blast", "/Imagenes_rebeca/bombaH/nova_blast.png");
-        bombaV = new Personaje("Bomba", 0, "Pumpkin Bomb", "/Imagenes_rebeca/bombaV/pumpkin_bomb.png");
+        bombaH = new Personaje("Bomba", 11, "Nova Blast", "/Imagenes_rebeca/bombaH/nova_blast.png");
+        bombaV = new Personaje("Bomba", 11, "Pumpkin Bomb", "/Imagenes_rebeca/bombaV/pumpkin_bomb.png");
     }
     
     private void setPersonajes(){
         int colTH = getRandom(1,8);
         botones[9][colTH].setText("Tierra H");
-//        botones[9][colTH].character=tierraH;
+        botones[9][colTH].SetCharacter(tierraH);
 //        botones[9][colTH].setImage();
-        botones[9][colTH-1].setText("NovaBlast");
-//        botones[9][colTH].character=bombaH;
+        botones[9][colTH-1].setText("Nova Blast");
+        botones[9][colTH-1].SetCharacter(bombaH);
 //        botones[9][colTH].setImage();
-        botones[9][colTH+1].setText("NovaBlast");
-//        botones[9][colTH].character=bombaH;
+        botones[9][colTH+1].setText("Nova Blast");
+        botones[9][colTH+1].SetCharacter(bombaH);
 //        botones[9][colTH].setImage();
-        botones[8][colTH].setText("NovaBlast");
-//        botones[8][colTH].character=bombaH;
+        botones[8][colTH].setText("Nova Blast");
+        botones[8][colTH].SetCharacter(bombaH);
 //        botones[8][colTH].setImage();
         int nb=1; //Nueva Bomba
         while(nb<=3){
             int f=getRandom(8,9);
             int c=getRandom(0,9);
-            if(botones[f][c].getText().equals("")) {
-                botones[f][c].setText("NovaBlast");
-                botones[f][c].character=bombaH;
+            if(botones[f][c].character==null){
+                botones[f][c].setText("Nova Blast");
+                botones[f][c].SetCharacter(bombaH);
                 nb++;
             }
         }
@@ -342,25 +443,35 @@ public class TableroStratego extends JFrame {
                 else
                     f = getRandom(6,9);
                 c =getRandom(0,9);
-                if(botones[f][c].getText().equals("")) {
-                    botones[f][c].setText(heroes[posicion_heroe].Nombre);
+                if(botones[f][c].character == null) {
+                    botones[f][c].setText(heroes[posicion_heroe].Nombre+"("+String.valueOf(heroes[posicion_heroe].Nivel)+" )");
+                    botones[f][c].SetCharacter(heroes[posicion_heroe]);
                     heroe_actual--;
                 }
             }
         }
-        
+        // ubicando bombas y tierra villanos
         int colTV = getRandom(1,8);
-        botones[0][colTV].setText("Tierra V");
-        botones[0][colTV-1].setText("PumpkinBomb");
-        botones[0][colTV+1].setText("PumpkinBomb");
-        botones[1][colTV].setText("PumpkinBomb");
+        botones[0][colTV].setText("????");
+        botones[0][colTV].SetCharacter(tierraV);
+        botones[0][colTV].habilitado=false;
+        botones[0][colTV-1].setText("????");
+        botones[0][colTV-1].SetCharacter(bombaV);
+        botones[0][colTV-1].habilitado=false;
+        botones[0][colTV+1].setText("????");
+        botones[0][colTV+1].SetCharacter(bombaV);
+        botones[0][colTV+1].habilitado=false;
+        botones[1][colTV].setText("????");
+        botones[1][colTV].SetCharacter(bombaV);
+        botones[1][colTV].habilitado=false;
         int pb=1;
         while(pb<=3){
             int f=getRandom(0,1);
             int c=getRandom(0,9);
-            if(botones[f][c].getText().equals("")) {
-                botones[f][c].setText("PumpkinBomb");
-                botones[f][c].character=bombaV;
+            if(botones[f][c].character == null) {
+                botones[f][c].setText("????");
+                botones[f][c].SetCharacter(bombaV);
+                botones[f][c].habilitado=false;
                 pb++;
             }
         }
@@ -375,9 +486,12 @@ public class TableroStratego extends JFrame {
                 else
                     f = getRandom(0,3);
                 c =getRandom(0,9);
-                if(botones[f][c].getText().equals("")) {
-                    botones[f][c].setText(villanos[posicion_villano].Nombre);
-                    botones[f][c].character=villanos[posicion_villano];
+                if(botones[f][c].character == null) {
+                    botones[f][c].habilitado=false;
+//                  botones[f][c].setText(villanos[posicion_villano].Nombre+"("+String.valueOf(villanos[posicion_villano].Nivel)+" )");
+                    botones[f][c].setText("????");
+                    botones[f][c].SetCharacter(villanos[posicion_villano]);
+                    botones[f][c].habilitado=false;
                     villano_actual--;
                 }
             }
@@ -385,6 +499,27 @@ public class TableroStratego extends JFrame {
         
     }
     
+    private void cambioTurno(){
+        if (turnoPara=="Heroe"){
+            turnoPara="Villano";
+        }else{
+            turnoPara="Heroe";
+        }
+        for(int f=0; f<10;f++) {
+            for(int c=0;c<10;c++){
+                if(botones[f][c].character!=null){
+                    if(botones[f][c].character.Tipo==turnoPara || (turnoPara.equals("Villano") && botones[f][c].character.Nombre.equals("Pumpkin Bomb")) || (turnoPara.equals("Villano") && botones[f][c].character.Nombre.equals("Tierra Villanos"))
+                            || (turnoPara.equals("Heroe") && botones[f][c].character.Nombre.equals("Nova Blast")) || (turnoPara.equals("Heroe") && botones[f][c].character.Nombre.equals("Tierra Heroes"))){
+                        botones[f][c].setText(botones[f][c].character.Nombre+"("+String.valueOf(botones[f][c].character.Nivel)+")");
+                        botones[f][c].habilitado=true;
+                    }else{
+                        botones[f][c].setText("????");
+                        botones[f][c].habilitado=false;
+                    }
+                }
+            }
+        }
+    }
     private int getRandom(int min, int max) {
         return (int)Math.floor(Math.random() * (max - min + 1) + min);
     }
